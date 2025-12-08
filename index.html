@@ -138,10 +138,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.6rem;
+      gap: 1.4rem;
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -354,6 +355,48 @@
       color: rgba(248, 247, 244, 0.7);
     }
 
+    /* At a glance / proof strip */
+
+    .section-glance {
+      padding: 1.9rem 0;
+      border-bottom: 1px solid var(--border-soft);
+      background-color: var(--white);
+    }
+
+    .glance-inner {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+    }
+
+    .glance-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--mid-grey);
+      white-space: nowrap;
+    }
+
+    .glance-items {
+      display: grid;
+      gap: 0.8rem 2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+    }
+
+    .glance-item {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .glance-item strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      margin-bottom: 0.1rem;
+    }
+
     /* Grids & Cards */
 
     .grid {
@@ -549,6 +592,117 @@
       margin-bottom: 0;
     }
 
+    /* Services meta (functions / levels) */
+
+    .services-meta {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+    }
+
+    .services-meta-title {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.5rem;
+      color: rgba(247, 246, 242, 0.85);
+    }
+
+    .services-meta p {
+      font-size: 0.86rem;
+      margin-bottom: 0.4rem;
+      color: rgba(247, 246, 242, 0.8);
+    }
+
+    .bullet-list-tight {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.3rem 0 0;
+    }
+
+    .bullet-list-tight li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 0.86rem;
+      margin-bottom: 0.25rem;
+      color: rgba(247, 246, 242, 0.85);
+    }
+
+    .bullet-list-tight li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+    }
+
+    /* Candidates */
+
+    .candidates-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 2.2rem;
+      align-items: flex-start;
+    }
+
+    .candidates-panel {
+      border-radius: 0.75rem;
+      border: 1px solid var(--border-soft);
+      background-color: #FBFAF7;
+      padding: 1.5rem 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .candidates-panel h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .candidates-panel ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.6rem 0 0;
+    }
+
+    .candidates-panel li {
+      position: relative;
+      padding-left: 1rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .candidates-panel li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+    }
+
+    .candidates-meta {
+      font-size: 0.8rem;
+      color: var(--mid-grey);
+      margin-top: 0.5rem;
+    }
+
+    /* Insights */
+
+    .card-insight h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-insight p {
+      font-size: 0.88rem;
+    }
+
+    .insight-meta {
+      font-size: 0.8rem;
+      color: var(--mid-grey);
+      margin-top: 0.4rem;
+    }
+
     /* Contact */
 
     .contact-inner {
@@ -733,6 +887,14 @@
       .grid-3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .glance-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .services-meta {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     @media (max-width: 960px) {
@@ -767,6 +929,10 @@
       .contact-inner {
         grid-template-columns: minmax(0, 1fr);
       }
+
+      .candidates-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -780,7 +946,7 @@
       }
 
       .nav-links {
-        gap: 1rem;
+        gap: 0.8rem;
         font-size: 0.76rem;
       }
 
@@ -815,6 +981,10 @@
       .footer-links {
         padding-top: 0.3rem;
       }
+
+      .glance-items {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -836,9 +1006,11 @@
           <a href="#about">About</a>
           <a href="#sectors">Sectors</a>
           <a href="#services">Services</a>
-          <a href="#roles">Mandates</a>
           <a href="#approach">Approach</a>
           <a href="#founder">Founder</a>
+          <a href="#roles">Mandates</a>
+          <a href="#insights">Insights</a>
+          <a href="#candidates">Candidates</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -860,11 +1032,34 @@
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">For Clients</a>
-            <a href="#contact" class="btn btn-secondary">For Candidates</a>
+            <a href="#candidates" class="btn btn-secondary">For Candidates</a>
           </div>
           <p class="hero-subtext">
             Low-volume, research-led mandates with a founder who understands both the hangar and the boardroom.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- At a glance / proof strip -->
+    <section class="section-light section-glance">
+      <div class="container">
+        <div class="glance-inner">
+          <div class="glance-label">At a glance</div>
+          <div class="glance-items">
+            <div class="glance-item">
+              <strong>Asset-heavy, safety-critical focus</strong>
+              Aviation, aerospace and industrial operations where downtime, safety and regulation drive the P&amp;L.
+            </div>
+            <div class="glance-item">
+              <strong>Technical & leadership mandates</strong>
+              From licensed engineers and maintenance leaders through to Heads of Engineering, COOs and Technical Directors.
+            </div>
+            <div class="glance-item">
+              <strong>Low-volume, founder-led search</strong>
+              A small number of difficult mandates run properly, not a high-volume CV forwarding exercise.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -876,7 +1071,7 @@
           <div class="eyebrow">About Averdon Partners</div>
           <h2>Search for asset-heavy, safety-critical operations</h2>
           <p>
-            Averdon Partners is a specialist executive &amp; technical search firm focused on aviation, aerospace and complex engineering. We sit on the spine between operations and the boardroom – starting with critical technical roles and growing into retained leadership and executive mandates as relationships deepen.
+            Averdon Partners is a specialist executive &amp; technical search firm focused on aviation, aerospace and complex engineering. The firm sits on the spine between operations and the boardroom – starting with critical technical roles and, over time, moving into retained leadership and executive mandates.
           </p>
           <p>
             Every hire is treated as a commercial, risk and governance decision. We map the market, test for depth, and only introduce candidates we would trust with a fleet, an asset base or a regulatory relationship.
@@ -892,7 +1087,7 @@
           <div class="eyebrow">Sectors We Serve</div>
           <h2>Aviation, aerospace &amp; complex engineering</h2>
           <p>
-            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Typical mandates span European and UK-based operations.
+            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Typical mandates span UK and European operations.
           </p>
         </div>
 
@@ -941,15 +1136,15 @@
 
           <div class="card">
             <div class="card-tag">Future-facing</div>
-            <h3>Asset-Heavy Infrastructure &amp; Industrial Technology</h3>
+            <h3>Industrial Technology &amp; Infrastructure</h3>
             <p>
-              As relationships develop, we support leadership hiring across broader infrastructure and industrial technology portfolios.
+              Leadership and technical roles in asset-heavy infrastructure and industrial technology where physical assets and software meet.
             </p>
             <ul class="bullet-list">
               <li>COO / Head of Operations</li>
               <li>Technical &amp; asset management leadership</li>
               <li>Engineering &amp; projects directors</li>
-              <li>Risk, safety &amp; governance roles</li>
+              <li>Selected software &amp; data roles tied to operations</li>
             </ul>
           </div>
         </div>
@@ -972,12 +1167,12 @@
             <div class="card-tag">Core Offering</div>
             <h3>Executive &amp; Technical Search</h3>
             <p>
-              Search for critical technical and mid–senior leadership roles across aviation, aerospace and engineering.
+              Search for critical technical and mid–senior leadership roles across aviation, aerospace and engineering-led businesses.
             </p>
             <ul class="bullet-list">
               <li>Mandates scoped around risk, regulation and commercial impact</li>
-              <li>Full research and market-mapping before shortlist is finalised</li>
-              <li>Structured interviews with a focus on track record and operating context</li>
+              <li>Full research and market-mapping before shortlists are finalised</li>
+              <li>Structured interviews focused on track record and operating context</li>
               <li>Shortlists you can put in front of your board, regulator or owner with confidence</li>
             </ul>
           </div>
@@ -993,6 +1188,36 @@
               <li>Succession planning for key technical and operational positions</li>
               <li>Advisory input on organisational design and leadership bench strength</li>
               <li>Ongoing talent pipelines aligned to fleet, asset and growth plans</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="services-meta">
+          <div>
+            <div class="services-meta-title">Functions</div>
+            <p>
+              We focus on functions that sit close to the asset base and operating reality.
+            </p>
+            <ul class="bullet-list-tight">
+              <li>Engineering &amp; maintenance (line, base, workshop)</li>
+              <li>CAMO, airworthiness &amp; technical services</li>
+              <li>Operations &amp; control centre leadership</li>
+              <li>Safety, quality &amp; compliance</li>
+              <li>Asset management &amp; fleet strategy</li>
+              <li>Selected software &amp; data roles embedded in operations</li>
+            </ul>
+          </div>
+          <div>
+            <div class="services-meta-title">Levels</div>
+            <p>
+              Mandates typically range from senior technical leadership through to executive roles.
+            </p>
+            <ul class="bullet-list-tight">
+              <li>Senior engineer, supervisor and team lead</li>
+              <li>Maintenance, engineering and operations management</li>
+              <li>Head of Engineering, Head of Maintenance, Head of Operations</li>
+              <li>Technical Director, Group Technical roles</li>
+              <li>COO and other C-suite roles linked to operations and assets</li>
             </ul>
           </div>
         </div>
@@ -1053,7 +1278,7 @@
           <div class="eyebrow">Founder</div>
           <h2>Technical literacy, legal awareness, long-term view</h2>
           <p>
-            Averdon Partners is founder-led. The firm was built by an aerospace engineering graduate with hands-on experience in aeronautical maintenance and a route into aviation and asset-finance law.
+            Averdon Partners is founder-led. The firm was founded by an aerospace engineer with hands-on experience in aeronautical maintenance and a route into aviation and asset-finance law.
           </p>
         </div>
 
@@ -1063,16 +1288,16 @@
               Aerospace engineering background · Lufthansa Technik training · Route into PGDL &amp; SQE (aviation / asset-finance focus)
             </p>
             <p class="founder-highlight">
-              This mix of hangar-floor exposure and legal training shapes how we run search. We read technical documentation, understand maintenance and operational constraints, and think in terms of contracts, liability and governance.
+              That mix of hangar-floor exposure and legal training shapes how search is run: we read technical documentation, understand maintenance and operational constraints, and think in terms of contracts, liability and governance.
             </p>
             <p>
-              For clients, that means a search partner who can bridge conversations between engineering, operations, finance and legal. We pay attention to approvals, safety cases, SLAs and regulatory relationships – not just CV headlines.
+              For clients, that means a search partner who can bridge conversations between engineering, operations, finance and legal. Approvals, safety cases, SLAs and regulatory relationships are treated as central to the brief, not fine print.
             </p>
             <p>
-              For candidates, it means a process run by someone who understands the reality of technical and operational roles, the career paths behind them, and the way those paths intersect with evolving regulation and finance.
+              For candidates, it means a process led by someone who understands the reality of technical and operational careers and how those careers intersect with evolving regulation, finance and ownership structures.
             </p>
             <p class="founder-footnote">
-              A full founder profile will sit here in due course. For now, the focus is simple: do excellent work, mandate by mandate.
+              A fuller founder profile will sit here in due course. For now, the focus is simple: a small number of difficult mandates, run properly.
             </p>
           </div>
           <div class="founder-photo-wrapper" aria-hidden="true">
@@ -1089,7 +1314,7 @@
           <div class="eyebrow">Example Mandates</div>
           <h2>Illustrative roles we work on</h2>
           <p>
-            Live work is confidential. The examples below show the level and type of mandates we typically support. All details are anonymised.
+            Live work is confidential. The examples below show the level and type of mandates typically supported. All details are anonymised.
           </p>
         </div>
 
@@ -1141,6 +1366,88 @@
               Future-facing brief within an industrial technology or infrastructure-backed platform, linking operations, engineering and asset management under a single accountable leader.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights" class="section-light">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Insights</div>
+          <h2>Perspectives on technical &amp; leadership hiring</h2>
+          <p>
+            Short notes on how boards, owners and operators can think more clearly about technical and leadership hiring in asset-heavy, safety-critical businesses.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card card-insight">
+            <h3>What boards get wrong about maintenance leadership</h3>
+            <p>
+              Why “steady hands” in maintenance leadership are often under-valued, and how to assess the difference between keeping the lights on and genuinely reducing operational risk.
+            </p>
+            <p class="insight-meta">Note · Aviation &amp; MRO · Coming soon</p>
+          </article>
+
+          <article class="card card-insight">
+            <h3>Hiring B1/B2 engineers when everyone is short-staffed</h3>
+            <p>
+              How to think about approvals, shift patterns and progression so that hiring licensed engineers is not just a bidding war on hourly rates.
+            </p>
+            <p class="insight-meta">Note · Engineering Talent · Coming soon</p>
+          </article>
+
+          <article class="card card-insight">
+            <h3>Technical leadership as a governance topic</h3>
+            <p>
+              Why technical leadership should sit on the risk register, and how boards and owners can view key technical appointments through a governance lens.
+            </p>
+            <p class="insight-meta">Note · Governance &amp; Risk · Coming soon</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Candidates -->
+    <section id="candidates" class="section-light">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">For Candidates</div>
+          <h2>Technical &amp; leadership careers in aviation &amp; engineering</h2>
+          <p>
+            We work with experienced technical and operational leaders who are already trusted with assets, teams and safety. We are not a volume CV shop and we do not send candidates anywhere without a clear brief and consent.
+          </p>
+        </div>
+
+        <div class="candidates-layout">
+          <div>
+            <p>
+              If you are an engineer, maintenance or operations leader, or a technical executive in aviation, aerospace or related industrial businesses, you can share your details for confidential consideration on relevant mandates.
+            </p>
+            <p>
+              Please email an up-to-date CV and a short note on what you are looking for to
+              <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a>
+              using the subject line:
+            </p>
+            <p><strong>“CV – [Discipline] / [Preferred Location]”</strong></p>
+            <p class="candidates-meta">
+              Example: “CV – B1 Engineer (737/A320) / UK &amp; Europe”.
+            </p>
+          </div>
+          <div class="candidates-panel">
+            <h3>What we pay attention to</h3>
+            <ul>
+              <li>Type of assets you have been responsible for (fleet, facilities, infrastructure)</li>
+              <li>Regulatory environments you have operated under</li>
+              <li>Size and shape of teams you have led or influenced</li>
+              <li>Evidence of improving safety, reliability or commercial performance</li>
+              <li>Languages, geographies and mobility constraints</li>
+            </ul>
+            <p class="candidates-meta">
+              Not every CV will receive an immediate response. When there is a relevant mandate, we will reach out directly.
+            </p>
+          </div>
         </div>
       </div>
     </section>
