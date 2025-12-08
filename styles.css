@@ -168,6 +168,25 @@ nav {
   opacity: 1;
   color: var(--white);
 }
+    .nav-links .nav-contact {
+      padding: 0.35rem 1.2rem;
+      border-radius: 999px;
+      background-color: var(--gold);
+      color: var(--charcoal);
+      border: 1px solid var(--gold);
+      opacity: 1;
+    }
+
+    .nav-links .nav-contact::after {
+      display: none;
+    }
+
+    .nav-links .nav-contact:hover,
+    .nav-links .nav-contact:focus-visible {
+      background-color: #b18e48;
+      border-color: #b18e48;
+      color: var(--charcoal);
+    }
 
 .header-cta {
   display: flex;
@@ -228,9 +247,10 @@ main {
 }
 
 section {
-  padding: 4rem 0;
-  scroll-margin-top: 90px;
-}
+      padding: 4rem 0;
+      scroll-margin-top: 90px;
+    }
+
 
 .section-dark {
   background-color: var(--navy-soft);
