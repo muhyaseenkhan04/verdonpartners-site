@@ -6,11 +6,11 @@
   <title>Averdon Partners – Executive & Technical Search</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Averdon Partners is a specialist executive & technical search firm for aviation, aerospace and complex engineering, focused on business-critical technical and leadership roles in asset-heavy, safety-critical and regulated environments.">
+  <meta name="description" content="Averdon Partners is a specialist executive & technical search firm for aviation, aerospace and asset-heavy engineering, focused on business-critical technical and leadership roles in safety-critical, regulated environments.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Averdon Partners – Executive & Technical Search">
-  <meta property="og:description" content="Specialist executive & technical search for aviation, aerospace and complex engineering. Low-volume, research-led mandates in asset-heavy, safety-critical operations.">
+  <meta property="og:description" content="Specialist executive & technical search for aviation, aerospace and asset-heavy operations. Low-volume, research-led mandates in safety-critical, regulated environments.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.averdonpartners.com/">
   <meta property="og:image" content="https://www.averdonpartners.com/og-image-placeholder.jpg">
@@ -138,11 +138,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.4rem;
+      gap: 1.6rem;
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -222,6 +221,19 @@
     .btn-secondary:focus-visible {
       border-color: var(--gold);
       color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      color: var(--gold);
+      border-color: transparent;
+      padding-left: 0;
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      color: #a9863f;
       transform: translateY(-1px);
     }
 
@@ -322,11 +334,11 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 1.8rem;
+      gap: 1.6rem;
     }
 
     .hero-content {
-      max-width: 720px;
+      max-width: 760px;
     }
 
     .hero .eyebrow {
@@ -340,61 +352,19 @@
     .hero-lead {
       color: rgba(248, 247, 244, 0.86);
       font-size: 0.98rem;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.8rem;
     }
 
     .hero-subtext {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: rgba(248, 247, 244, 0.7);
-    }
-
-    /* At a glance / proof strip */
-
-    .section-glance {
-      padding: 1.9rem 0;
-      border-bottom: 1px solid var(--border-soft);
-      background-color: var(--white);
-    }
-
-    .glance-inner {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-      flex-wrap: wrap;
-    }
-
-    .glance-label {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--mid-grey);
-      white-space: nowrap;
-    }
-
-    .glance-items {
-      display: grid;
-      gap: 0.8rem 2rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      width: 100%;
-    }
-
-    .glance-item {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .glance-item strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--text-dark);
-      margin-bottom: 0.1rem;
     }
 
     /* Grids & Cards */
@@ -592,149 +562,43 @@
       margin-bottom: 0;
     }
 
-    /* Services meta (functions / levels) */
+    /* Contact & Candidates */
 
-    .services-meta {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2rem;
-    }
-
-    .services-meta-title {
-      font-size: 0.88rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 0.5rem;
-      color: rgba(247, 246, 242, 0.85);
-    }
-
-    .services-meta p {
-      font-size: 0.86rem;
-      margin-bottom: 0.4rem;
-      color: rgba(247, 246, 242, 0.8);
-    }
-
-    .bullet-list-tight {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.3rem 0 0;
-    }
-
-    .bullet-list-tight li {
-      position: relative;
-      padding-left: 1rem;
-      font-size: 0.86rem;
-      margin-bottom: 0.25rem;
-      color: rgba(247, 246, 242, 0.85);
-    }
-
-    .bullet-list-tight li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--gold);
-    }
-
-    /* Candidates */
-
-    .candidates-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 2.2rem;
-      align-items: flex-start;
-    }
-
-    .candidates-panel {
-      border-radius: 0.75rem;
-      border: 1px solid var(--border-soft);
-      background-color: #FBFAF7;
-      padding: 1.5rem 1.4rem;
-      font-size: 0.9rem;
-    }
-
-    .candidates-panel h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .candidates-panel ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.6rem 0 0;
-    }
-
-    .candidates-panel li {
-      position: relative;
-      padding-left: 1rem;
-      margin-bottom: 0.35rem;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .candidates-panel li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--gold);
-    }
-
-    .candidates-meta {
-      font-size: 0.8rem;
-      color: var(--mid-grey);
-      margin-top: 0.5rem;
-    }
-
-    /* Insights */
-
-    .card-insight h3 {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .card-insight p {
-      font-size: 0.88rem;
-    }
-
-    .insight-meta {
-      font-size: 0.8rem;
-      color: var(--mid-grey);
-      margin-top: 0.4rem;
-    }
-
-    /* Contact */
-
-    .contact-inner {
+    .split-layout {
       display: grid;
       grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
       gap: 2.2rem;
       align-items: flex-start;
     }
 
-    .contact-details p {
+    .contact-details p,
+    .candidate-copy p {
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
     }
 
-    .contact-meta {
+    .contact-meta,
+    .candidate-meta {
       font-size: 0.85rem;
       color: rgba(248, 247, 244, 0.78);
       margin-top: 0.35rem;
     }
 
-    .contact-list {
+    .contact-list,
+    .candidate-list {
       list-style: none;
       padding: 0;
       margin: 0.8rem 0 0;
       font-size: 0.9rem;
     }
 
-    .contact-list li {
+    .contact-list li,
+    .candidate-list li {
       margin-bottom: 0.3rem;
     }
 
-    .contact-list span {
+    .contact-list span,
+    .candidate-list span {
       display: inline-block;
       min-width: 4.3rem;
       color: rgba(248, 247, 244, 0.7);
@@ -743,11 +607,26 @@
       letter-spacing: 0.13em;
     }
 
-    .contact-form {
+    .panel {
       border-radius: 0.75rem;
       padding: 1.6rem 1.5rem;
       background: rgba(11, 22, 40, 0.96);
       border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .candidate-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.6rem 0 0.8rem;
+    }
+
+    .candidate-pill {
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.78rem;
+      color: rgba(248, 247, 244, 0.86);
     }
 
     .form-row {
@@ -887,14 +766,6 @@
       .grid-3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
-      .glance-items {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .services-meta {
-        grid-template-columns: minmax(0, 1fr);
-      }
     }
 
     @media (max-width: 960px) {
@@ -926,11 +797,7 @@
         justify-content: flex-start;
       }
 
-      .contact-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .candidates-layout {
+      .split-layout {
         grid-template-columns: minmax(0, 1fr);
       }
     }
@@ -946,7 +813,7 @@
       }
 
       .nav-links {
-        gap: 0.8rem;
+        gap: 1rem;
         font-size: 0.76rem;
       }
 
@@ -981,10 +848,6 @@
       .footer-links {
         padding-top: 0.3rem;
       }
-
-      .glance-items {
-        grid-template-columns: minmax(0, 1fr);
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1004,12 +867,10 @@
       <nav aria-label="Primary">
         <div class="nav-links">
           <a href="#about">About</a>
-          <a href="#sectors">Sectors</a>
-          <a href="#services">Services</a>
+          <a href="#services">What we do</a>
+          <a href="#sectors">Industries</a>
           <a href="#approach">Approach</a>
           <a href="#founder">Founder</a>
-          <a href="#roles">Mandates</a>
-          <a href="#insights">Insights</a>
           <a href="#candidates">Candidates</a>
           <a href="#contact">Contact</a>
         </div>
@@ -1041,29 +902,6 @@
       </div>
     </section>
 
-    <!-- At a glance / proof strip -->
-    <section class="section-light section-glance">
-      <div class="container">
-        <div class="glance-inner">
-          <div class="glance-label">At a glance</div>
-          <div class="glance-items">
-            <div class="glance-item">
-              <strong>Asset-heavy, safety-critical focus</strong>
-              Aviation, aerospace and industrial operations where downtime, safety and regulation drive the P&amp;L.
-            </div>
-            <div class="glance-item">
-              <strong>Technical & leadership mandates</strong>
-              From licensed engineers and maintenance leaders through to Heads of Engineering, COOs and Technical Directors.
-            </div>
-            <div class="glance-item">
-              <strong>Low-volume, founder-led search</strong>
-              A small number of difficult mandates run properly, not a high-volume CV forwarding exercise.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- About -->
     <section id="about" class="section-dark">
       <div class="container">
@@ -1071,7 +909,7 @@
           <div class="eyebrow">About Averdon Partners</div>
           <h2>Search for asset-heavy, safety-critical operations</h2>
           <p>
-            Averdon Partners is a specialist executive &amp; technical search firm focused on aviation, aerospace and complex engineering. The firm sits on the spine between operations and the boardroom – starting with critical technical roles and, over time, moving into retained leadership and executive mandates.
+            Averdon Partners is a specialist executive &amp; technical search firm focused on aviation, aerospace and complex engineering. We sit on the spine between operations and the boardroom – starting with critical technical roles and growing into retained leadership and executive mandates as relationships deepen.
           </p>
           <p>
             Every hire is treated as a commercial, risk and governance decision. We map the market, test for depth, and only introduce candidates we would trust with a fleet, an asset base or a regulatory relationship.
@@ -1080,14 +918,14 @@
       </div>
     </section>
 
-    <!-- Sectors -->
+    <!-- Industries / Sectors -->
     <section id="sectors" class="section-light">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Sectors We Serve</div>
-          <h2>Aviation, aerospace &amp; complex engineering</h2>
+          <div class="eyebrow">Industries We Serve</div>
+          <h2>Aviation, aerospace &amp; complex engineering first</h2>
           <p>
-            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Typical mandates span UK and European operations.
+            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Work today is centred on aviation and engineering, with selective expansion into adjacent STEM and technology mandates.
           </p>
         </div>
 
@@ -1135,30 +973,30 @@
           </div>
 
           <div class="card">
-            <div class="card-tag">Future-facing</div>
-            <h3>Industrial Technology &amp; Infrastructure</h3>
+            <div class="card-tag">Asset-heavy &amp; STEM</div>
+            <h3>Infrastructure &amp; STEM Technology <span style="font-weight:400;">(Phase 2)</span></h3>
             <p>
-              Leadership and technical roles in asset-heavy infrastructure and industrial technology where physical assets and software meet.
+              As relationships develop, we support leadership hiring across broader infrastructure and selected STEM / technology portfolios with asset-heavy or safety-critical characteristics.
             </p>
             <ul class="bullet-list">
               <li>COO / Head of Operations</li>
               <li>Technical &amp; asset management leadership</li>
               <li>Engineering &amp; projects directors</li>
-              <li>Selected software &amp; data roles tied to operations</li>
+              <li>Risk, safety &amp; governance roles</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- What we do / Services -->
     <section id="services" class="section-charcoal">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Services</div>
+          <div class="eyebrow">What We Do</div>
           <h2>Executive &amp; technical search, built for the long term</h2>
           <p>
-            We keep our mandate volume intentionally low. Every search is founder-led, research-backed and run with the discipline you would expect from a law firm or advisory boutique.
+            We keep mandate volume intentionally low. Every search is founder-led, research-backed and run with the discipline you would expect from a law firm or advisory boutique.
           </p>
         </div>
 
@@ -1167,12 +1005,12 @@
             <div class="card-tag">Core Offering</div>
             <h3>Executive &amp; Technical Search</h3>
             <p>
-              Search for critical technical and mid–senior leadership roles across aviation, aerospace and engineering-led businesses.
+              Search for critical technical and mid–senior leadership roles across aviation, aerospace and engineering.
             </p>
             <ul class="bullet-list">
               <li>Mandates scoped around risk, regulation and commercial impact</li>
-              <li>Full research and market-mapping before shortlists are finalised</li>
-              <li>Structured interviews focused on track record and operating context</li>
+              <li>Structured research and market-mapping before shortlists are finalised</li>
+              <li>Interviews focused on track record, operating context and leadership behaviour</li>
               <li>Shortlists you can put in front of your board, regulator or owner with confidence</li>
             </ul>
           </div>
@@ -1188,36 +1026,6 @@
               <li>Succession planning for key technical and operational positions</li>
               <li>Advisory input on organisational design and leadership bench strength</li>
               <li>Ongoing talent pipelines aligned to fleet, asset and growth plans</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="services-meta">
-          <div>
-            <div class="services-meta-title">Functions</div>
-            <p>
-              We focus on functions that sit close to the asset base and operating reality.
-            </p>
-            <ul class="bullet-list-tight">
-              <li>Engineering &amp; maintenance (line, base, workshop)</li>
-              <li>CAMO, airworthiness &amp; technical services</li>
-              <li>Operations &amp; control centre leadership</li>
-              <li>Safety, quality &amp; compliance</li>
-              <li>Asset management &amp; fleet strategy</li>
-              <li>Selected software &amp; data roles embedded in operations</li>
-            </ul>
-          </div>
-          <div>
-            <div class="services-meta-title">Levels</div>
-            <p>
-              Mandates typically range from senior technical leadership through to executive roles.
-            </p>
-            <ul class="bullet-list-tight">
-              <li>Senior engineer, supervisor and team lead</li>
-              <li>Maintenance, engineering and operations management</li>
-              <li>Head of Engineering, Head of Maintenance, Head of Operations</li>
-              <li>Technical Director, Group Technical roles</li>
-              <li>COO and other C-suite roles linked to operations and assets</li>
             </ul>
           </div>
         </div>
@@ -1278,7 +1086,7 @@
           <div class="eyebrow">Founder</div>
           <h2>Technical literacy, legal awareness, long-term view</h2>
           <p>
-            Averdon Partners is founder-led. The firm was founded by an aerospace engineer with hands-on experience in aeronautical maintenance and a route into aviation and asset-finance law.
+            Averdon Partners is founder-led. The firm was built by an aerospace engineering graduate with hands-on experience in aeronautical maintenance and a route into aviation and asset-finance law.
           </p>
         </div>
 
@@ -1288,16 +1096,16 @@
               Aerospace engineering background · Lufthansa Technik training · Route into PGDL &amp; SQE (aviation / asset-finance focus)
             </p>
             <p class="founder-highlight">
-              That mix of hangar-floor exposure and legal training shapes how search is run: we read technical documentation, understand maintenance and operational constraints, and think in terms of contracts, liability and governance.
+              This mix of hangar-floor exposure and legal training shapes how we run search. We read technical documentation, understand maintenance and operational constraints, and think in terms of contracts, liability and governance.
             </p>
             <p>
-              For clients, that means a search partner who can bridge conversations between engineering, operations, finance and legal. Approvals, safety cases, SLAs and regulatory relationships are treated as central to the brief, not fine print.
+              For clients, that means a search partner who can bridge conversations between engineering, operations, finance and legal. We pay attention to approvals, safety cases, SLAs and regulatory relationships – not just CV headlines.
             </p>
             <p>
-              For candidates, it means a process led by someone who understands the reality of technical and operational careers and how those careers intersect with evolving regulation, finance and ownership structures.
+              For candidates, it means a process run by someone who understands the reality of technical and operational roles, the career paths behind them, and the way those paths intersect with evolving regulation and finance.
             </p>
             <p class="founder-footnote">
-              A fuller founder profile will sit here in due course. For now, the focus is simple: a small number of difficult mandates, run properly.
+              A full founder profile will sit here in due course. For now, the focus is simple: do excellent work, mandate by mandate.
             </p>
           </div>
           <div class="founder-photo-wrapper" aria-hidden="true">
@@ -1314,7 +1122,7 @@
           <div class="eyebrow">Example Mandates</div>
           <h2>Illustrative roles we work on</h2>
           <p>
-            Live work is confidential. The examples below show the level and type of mandates typically supported. All details are anonymised.
+            Live work is confidential. The examples below show the level and type of mandates we typically support. All details are anonymised.
           </p>
         </div>
 
@@ -1370,84 +1178,86 @@
       </div>
     </section>
 
-    <!-- Insights -->
-    <section id="insights" class="section-light">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Insights</div>
-          <h2>Perspectives on technical &amp; leadership hiring</h2>
-          <p>
-            Short notes on how boards, owners and operators can think more clearly about technical and leadership hiring in asset-heavy, safety-critical businesses.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card card-insight">
-            <h3>What boards get wrong about maintenance leadership</h3>
-            <p>
-              Why “steady hands” in maintenance leadership are often under-valued, and how to assess the difference between keeping the lights on and genuinely reducing operational risk.
-            </p>
-            <p class="insight-meta">Note · Aviation &amp; MRO · Coming soon</p>
-          </article>
-
-          <article class="card card-insight">
-            <h3>Hiring B1/B2 engineers when everyone is short-staffed</h3>
-            <p>
-              How to think about approvals, shift patterns and progression so that hiring licensed engineers is not just a bidding war on hourly rates.
-            </p>
-            <p class="insight-meta">Note · Engineering Talent · Coming soon</p>
-          </article>
-
-          <article class="card card-insight">
-            <h3>Technical leadership as a governance topic</h3>
-            <p>
-              Why technical leadership should sit on the risk register, and how boards and owners can view key technical appointments through a governance lens.
-            </p>
-            <p class="insight-meta">Note · Governance &amp; Risk · Coming soon</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Candidates -->
-    <section id="candidates" class="section-light">
+    <section id="candidates" class="section-dark">
       <div class="container">
         <div class="section-header">
           <div class="eyebrow">For Candidates</div>
-          <h2>Technical &amp; leadership careers in aviation &amp; engineering</h2>
+          <h2>Senior technical &amp; operational talent</h2>
           <p>
-            We work with experienced technical and operational leaders who are already trusted with assets, teams and safety. We are not a volume CV shop and we do not send candidates anywhere without a clear brief and consent.
+            We work with experienced engineers, maintenance leaders and operational managers who are accountable for availability, safety and performance – not just activity. If that sounds like you, we want you on our radar.
           </p>
         </div>
 
-        <div class="candidates-layout">
-          <div>
+        <div class="split-layout">
+          <div class="candidate-copy">
             <p>
-              If you are an engineer, maintenance or operations leader, or a technical executive in aviation, aerospace or related industrial businesses, you can share your details for confidential consideration on relevant mandates.
+              Typical profiles include:
             </p>
+            <div class="candidate-pill-row">
+              <span class="candidate-pill">B1 / B2 Licensed Engineers</span>
+              <span class="candidate-pill">Line &amp; Base Maintenance Managers</span>
+              <span class="candidate-pill">Engineering Managers</span>
+              <span class="candidate-pill">CAMO &amp; Airworthiness Leaders</span>
+              <span class="candidate-pill">Operations &amp; Fleet Leaders</span>
+            </div>
             <p>
-              Please email an up-to-date CV and a short note on what you are looking for to
-              <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a>
-              using the subject line:
+              We are selective. We do not run high-volume registration campaigns or junior CV databases. When you share your details, they are reviewed with the same discipline we apply to mandates.
             </p>
-            <p><strong>“CV – [Discipline] / [Preferred Location]”</strong></p>
-            <p class="candidates-meta">
-              Example: “CV – B1 Engineer (737/A320) / UK &amp; Europe”.
-            </p>
-          </div>
-          <div class="candidates-panel">
-            <h3>What we pay attention to</h3>
-            <ul>
-              <li>Type of assets you have been responsible for (fleet, facilities, infrastructure)</li>
-              <li>Regulatory environments you have operated under</li>
-              <li>Size and shape of teams you have led or influenced</li>
-              <li>Evidence of improving safety, reliability or commercial performance</li>
-              <li>Languages, geographies and mobility constraints</li>
+            <ul class="candidate-list">
+              <li><span>Email</span> <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a></li>
             </ul>
-            <p class="candidates-meta">
-              Not every CV will receive an immediate response. When there is a relevant mandate, we will reach out directly.
+            <p class="candidate-meta">
+              The form opposite is a simple way to frame your background. For now, please also email an up-to-date CV or profile to <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a>.
             </p>
           </div>
+
+          <form class="panel" action="#" method="post" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cand-name">Name</label>
+                <input id="cand-name" name="name" type="text" autocomplete="name" placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="cand-email">Email</label>
+                <input id="cand-email" name="email" type="email" autocomplete="email" placeholder="name@provider.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cand-role">Current Role</label>
+                <input id="cand-role" name="current_role" type="text" placeholder="Job title">
+              </div>
+              <div class="form-group">
+                <label for="cand-company">Current Employer</label>
+                <input id="cand-company" name="current_company" type="text" placeholder="Organisation">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cand-location">Location</label>
+                <input id="cand-location" name="location" type="text" placeholder="City / Country">
+              </div>
+              <div class="form-group">
+                <label for="cand-target">Target Roles</label>
+                <input id="cand-target" name="target_roles" type="text" placeholder="Roles or level you’re considering">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cand-notes">Context</label>
+              <textarea id="cand-notes" name="notes" placeholder="Briefly outline your experience, notice period and what you’re open to next."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Share profile outline
+            </button>
+            <p class="form-footnote">
+              This form is for high-level context only and is not yet connected to an applicant tracking system. Please email an up-to-date CV to <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a> so we can review your profile properly.
+            </p>
+          </form>
         </div>
       </div>
     </section>
@@ -1463,21 +1273,23 @@
           </p>
         </div>
 
-        <div class="contact-inner">
+        <div class="split-layout">
           <div class="contact-details">
             <p>
               For confidential discussions about a mandate, or to understand how we would approach search for your organisation, please get in touch directly.
             </p>
             <ul class="contact-list">
-              <li><span>Email</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
+              <li><span>Mandates</span> <a href="mailto:mandates@averdonpartners.com">mandates@averdonpartners.com</a></li>
+              <li><span>General</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
+              <li><span>Legal</span> <a href="mailto:legal@averdonpartners.com">legal@averdonpartners.com</a></li>
               <li><span>Phone</span> <a href="tel:+442000000000">+44 (0)20 0000 0000</a></li>
             </ul>
             <p class="contact-meta">
-              We typically respond within one working day. For time-critical mandates, please note this in the subject line or message field.
+              We typically respond within one working day. For time-critical mandates, please flag this in the subject line or opening paragraph.
             </p>
           </div>
 
-          <form class="contact-form" action="#" method="post">
+          <form class="panel" action="#" method="post">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -1502,14 +1314,14 @@
 
             <div class="form-group">
               <label for="message">Brief</label>
-              <textarea id="message" name="message" placeholder="Outline the role, context and timescales."></textarea>
+              <textarea id="message" name="message" placeholder="Outline the role, context, stakeholders and timescales."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">
               Submit enquiry
             </button>
             <p class="form-footnote">
-              This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
+              This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data. For NDAs and formal documentation, contact <a href="mailto:legal@averdonpartners.com">legal@averdonpartners.com</a>.
             </p>
           </form>
         </div>
