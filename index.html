@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Averdon Partners – Executive & Technical Search</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Averdon Partners is a specialist executive & technical search firm for aviation, aerospace and complex engineering, focused on business-critical technical and leadership roles in asset-heavy, safety-critical and regulated environments.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Averdon Partners – Executive & Technical Search">
+  <meta property="og:description" content="Specialist executive & technical search for aviation, aerospace and complex engineering. Low-volume, research-led mandates in asset-heavy, safety-critical operations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.averdonpartners.com/">
+  <meta property="og:image" content="https://www.averdonpartners.com/og-image-placeholder.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0B1B33;
+      --charcoal: #191E24;
+      --light-grey: #D8D4CC;
+      --gold: #C2A05A;
+      --white: #F8F7F4;
+      --off-white: #F3F1EB;
+      --text-dark: #171717;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--navy);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', "Times New Roman", serif;
+      letter-spacing: 0.02em;
+      margin-top: 0;
+      color: var(--white);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 3vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 2.3vw, 2.2rem);
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    /* Header & Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(11, 27, 51, 0.95), rgba(11, 27, 51, 0.9));
+      border-bottom: 1px solid rgba(200, 200, 200, 0.06);
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', "Times New Roman", serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .brand span {
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links a {
+      position: relative;
+      opacity: 0.85;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.3rem;
+      width: 0;
+      height: 1px;
+      background-color: var(--gold);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      opacity: 1;
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.08s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--gold);
+      color: var(--charcoal);
+      border-color: var(--gold);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background-color: #b18e48;
+      border-color: #b18e48;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    /* Sections */
+
+    main {
+      padding-bottom: 4rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-light {
+      background-color: var(--off-white);
+      color: var(--text-dark);
+    }
+
+    .section-light h2,
+    .section-light h3 {
+      color: #1d1e23;
+    }
+
+    .section-dark {
+      background-color: var(--navy);
+      color: var(--white);
+    }
+
+    .section-charcoal {
+      background-color: var(--charcoal);
+      color: var(--white);
+    }
+
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 2.2rem;
+    }
+
+    .section-header p {
+      color: rgba(248, 247, 244, 0.82);
+    }
+
+    .section-light .section-header p {
+      color: #4a4a4a;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--light-grey);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-light .eyebrow {
+      color: #958f84;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      background: radial-gradient(circle at top left, rgba(194, 160, 90, 0.18), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(216, 212, 204, 0.18), transparent 55%),
+                  var(--navy);
+      padding: 5rem 0 4.5rem;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(11, 27, 51, 0.3), rgba(11, 27, 51, 1));
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero-lead {
+      color: rgba(248, 247, 244, 0.86);
+      font-size: 0.98rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtext {
+      font-size: 0.85rem;
+      color: rgba(248, 247, 244, 0.7);
+    }
+
+    /* Grids & Cards */
+
+    .grid {
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      border-radius: 0.75rem;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.02), transparent 60%), rgba(25, 30, 36, 0.96);
+    }
+
+    .section-light .card {
+      background: #fff;
+      border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(248, 247, 244, 0.65);
+      margin-bottom: 0.45rem;
+    }
+
+    .section-light .card-tag {
+      color: #8a857c;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    ul.bullet-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.6rem 0 0;
+    }
+
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+    }
+
+    /* Approach steps */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .step {
+      border-radius: 0.75rem;
+      padding: 1.3rem 1.3rem 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 27, 51, 0.85);
+    }
+
+    .step-number {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .step-title {
+      font-size: 0.98rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .step p {
+      font-size: 0.86rem;
+      color: rgba(248, 247, 244, 0.8);
+      margin-bottom: 0;
+    }
+
+    /* Founder */
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .founder-meta {
+      font-size: 0.9rem;
+      color: #5b564f;
+      margin-bottom: 0.8rem;
+    }
+
+    .founder-highlight {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: #36322c;
+      margin-bottom: 0.9rem;
+    }
+
+    .founder-photo-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .founder-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 0, 0, 0.08);
+      background: radial-gradient(circle at 30% 20%, #ffffff, #d8d4cc);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-photo::after {
+      content: "Headshot";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #888276;
+    }
+
+    .founder-footnote {
+      font-size: 0.78rem;
+      color: #6f6a61;
+      margin-top: 0.5rem;
+    }
+
+    /* Roles */
+
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .role-card {
+      border-radius: 0.8rem;
+      padding: 1.25rem 1.3rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(25, 30, 36, 0.96);
+    }
+
+    .role-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(248, 247, 244, 0.7);
+      margin-bottom: 0.4rem;
+    }
+
+    .role-title {
+      font-size: 0.98rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .role-meta {
+      font-size: 0.85rem;
+      color: rgba(248, 247, 244, 0.72);
+      margin-bottom: 0;
+    }
+
+    /* Contact */
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
+      gap: 2.2rem;
+      align-items: flex-start;
+    }
+
+    .contact-details p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-meta {
+      font-size: 0.85rem;
+      color: rgba(248, 247, 244, 0.75);
+      margin-top: 0.4rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-list span {
+      display: inline-block;
+      min-width: 4.2rem;
+      color: rgba(248, 247, 244, 0.7);
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
+    .contact-form {
+      border-radius: 0.75rem;
+      padding: 1.6rem 1.5rem;
+      background: rgba(11, 27, 51, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      margin-bottom: 0.35rem;
+      color: rgba(248, 247, 244, 0.8);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      border-radius: 0.55rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background-color: rgba(11, 27, 51, 0.95);
+      color: var(--white);
+      padding: 0.65rem 0.75rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    textarea::placeholder {
+      color: rgba(248, 247, 244, 0.45);
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px rgba(194, 160, 90, 0.25);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-footnote {
+      font-size: 0.78rem;
+      color: rgba(248, 247, 244, 0.68);
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background-color: #050b13;
+      padding: 1.8rem 0 1.4rem;
+      font-size: 0.82rem;
+      color: rgba(248, 247, 244, 0.75);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', "Times New Roman", serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.82rem;
+      color: rgba(248, 247, 244, 0.7);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      opacity: 0.8;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 0.7rem;
+      margin-top: 0.7rem;
+      font-size: 0.78rem;
+    }
+
+    .footer-bottom span {
+      opacity: 0.85;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 960px) {
+      .site-header-inner {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: 0.35rem;
+      }
+
+      .header-cta {
+        order: 2;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .founder-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .founder-photo-wrapper {
+        justify-content: flex-start;
+      }
+
+      .roles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 3rem 0;
+      }
+
+      .hero {
+        padding-top: 4.2rem;
+        padding-bottom: 3.5rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.78rem;
+      }
+
+      .hero-actions {
+        flex-direction: row;
+        gap: 0.7rem;
+      }
+
+      .btn {
+        width: auto;
+      }
+
+      .grid-3,
+      .grid-2,
+      .roles-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        padding-top: 0.3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand" aria-label="Averdon Partners">
+        <span>Averdon</span> Partners
+      </div>
+      <nav aria-label="Primary">
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#sectors">Sectors</a>
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#founder">Founder</a>
+          <a href="#roles">Mandates</a>
+        </div>
+      </nav>
+      <div class="header-cta">
+        <a href="#contact" class="btn btn-primary">Talk to us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow">Specialist Executive & Technical Search</div>
+          <h1>Executive & Technical Search for Aviation, Aerospace & Engineering</h1>
+          <p class="hero-lead">
+            Averdon Partners works with airlines, MROs and engineering-led businesses on business-critical technical and leadership hires in asset-heavy, safety-critical and regulated environments.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">For Clients</a>
+            <a href="#contact" class="btn btn-secondary">For Candidates</a>
+          </div>
+          <p class="hero-subtext">
+            Low-volume, research-led mandates with a founder who understands both the hangar and the boardroom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">About Averdon Partners</div>
+          <h2>Search for asset-heavy, safety-critical operations</h2>
+          <p>
+            Averdon Partners is a specialist executive & technical search firm focused on aviation, aerospace and complex engineering. We sit on the spine between operations and the boardroom – starting with critical technical roles and growing into retained leadership and executive mandates as relationships deepen.
+          </p>
+          <p>
+            Every hire is treated as a commercial, risk and governance decision. We map the market, test for depth, and only introduce candidates we would trust with a fleet, an asset base or a regulatory relationship.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors -->
+    <section id="sectors" class="section-light">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Sectors We Serve</div>
+          <h2>Aviation, aerospace & complex engineering</h2>
+          <p>
+            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Typical mandates span European and UK-based operations.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-tag">Airlines & Operators</div>
+            <h3>Airlines & Flight Operations</h3>
+            <p>
+              Commercial and regional carriers, cargo operators and ACMI providers running high-utilisation fleets.
+            </p>
+            <ul class="bullet-list">
+              <li>B1 / B2 licensed engineers</li>
+              <li>Line & base maintenance management</li>
+              <li>CAMO & continuing airworthiness</li>
+              <li>Ops & engineering leadership roles</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">MRO & Maintenance</div>
+            <h3>MRO, Maintenance & Modifications</h3>
+            <p>
+              Independent and OEM-owned MROs, engine shops and modification centres with tight turn times.
+            </p>
+            <ul class="bullet-list">
+              <li>Base maintenance managers & chiefs</li>
+              <li>Workshop & production managers</li>
+              <li>Planning & reliability engineering</li>
+              <li>Quality, safety & compliance leaders</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">Aerospace & Engineering</div>
+            <h3>Aerospace & Defence Engineering</h3>
+            <p>
+              OEMs, Tier 1 suppliers and specialist engineering firms supporting complex programmes and platforms.
+            </p>
+            <ul class="bullet-list">
+              <li>Engineering managers & functional leads</li>
+              <li>Systems / structures engineering teams</li>
+              <li>Test, certification & airworthiness</li>
+              <li>Programme & project leadership</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">Future-facing</div>
+            <h3>Asset-Heavy Infrastructure & Industrial Technology</h3>
+            <p>
+              As relationships develop, we support leadership hiring across broader infrastructure and industrial technology portfolios.
+            </p>
+            <ul class="bullet-list">
+              <li>COO / Head of Operations</li>
+              <li>Technical & asset management leadership</li>
+              <li>Engineering & projects directors</li>
+              <li>Risk, safety & governance roles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-charcoal">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Services</div>
+          <h2>Executive & technical search, built for the long term</h2>
+          <p>
+            We keep our mandate volume intentionally low. Every search is founder-led, research-backed and run with the discipline you would expect from a law firm or advisory boutique.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-tag">Core Offering</div>
+            <h3>Executive & Technical Search</h3>
+            <p>
+              Search for critical technical and mid–senior leadership roles across aviation, aerospace and engineering.
+            </p>
+            <ul class="bullet-list">
+              <li>Mandates scoped around risk, regulation and commercial impact</li>
+              <li>Full research and market-mapping before shortlist is finalised</li>
+              <li>Structured interviews with a focus on track record and operating context</li>
+              <li>Shortlists you can put in front of your board, regulator or owner with confidence</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">Long-Term View</div>
+            <h3>Leadership & Succession</h3>
+            <p>
+              As trust builds, we move upstream into leadership and executive search for asset-heavy, safety-critical businesses.
+            </p>
+            <ul class="bullet-list">
+              <li>COO, CFO, GC and functional leadership roles in aviation and infrastructure</li>
+              <li>Succession planning for key technical and operational positions</li>
+              <li>Advisory input on organisational design and leadership bench strength</li>
+              <li>Ongoing talent pipelines aligned to fleet, asset and growth plans</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach" class="section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Approach</div>
+          <h2>Low-volume, research-led, founder-driven</h2>
+          <p>
+            Our process is built for regulated, asset-heavy environments where the cost of a bad hire is measured in more than recruitment fees. We work quietly, deliberately and with clear communication throughout.
+          </p>
+        </div>
+
+        <div class="steps" aria-label="How we work">
+          <div class="step">
+            <div class="step-number">01. Define</div>
+            <div class="step-title">Brief & mandate definition</div>
+            <p>
+              We start with your operating reality: fleet, assets, regulatory exposure, stakeholder expectations and internal politics. The brief is shaped around risk and outcomes, not just a job description.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02. Map</div>
+            <div class="step-title">Research & market mapping</div>
+            <p>
+              We build a structured view of the market: where the right people sit, how they are measured, and what would move them. Target lists are agreed before outreach begins.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03. Assess</div>
+            <div class="step-title">Shortlist & structured interviews</div>
+            <p>
+              Candidates are assessed against technical depth, leadership behaviour and fit with your operating environment. You see a small, defensible shortlist – not a stack of CVs.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04. Close</div>
+            <div class="step-title">Offer, onboarding & follow-up</div>
+            <p>
+              We support offer design, resignation management and onboarding. After placement, we stay close to both sides to ensure the hire lands as intended.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder -->
+    <section id="founder" class="section-light">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Founder</div>
+          <h2>Technical literacy, legal awareness, long-term view</h2>
+          <p>
+            Averdon Partners is founder-led. The firm was built by an aerospace engineering graduate with hands-on experience in aeronautical maintenance and a route into aviation and asset-finance law.
+          </p>
+        </div>
+
+        <div class="founder-layout">
+          <div>
+            <p class="founder-meta">
+              Aerospace engineering background · Lufthansa Technik training · Route into PGDL &amp; SQE (aviation / asset-finance focus)
+            </p>
+            <p class="founder-highlight">
+              This mix of hangar-floor exposure and legal training shapes how we run search. We read technical documentation, understand maintenance and operational constraints, and think in terms of contracts, liability and governance.
+            </p>
+            <p>
+              For clients, that means a search partner who can bridge conversations between engineering, operations, finance and legal. We pay attention to approvals, safety cases, SLAs and regulatory relationships – not just CV headlines.
+            </p>
+            <p>
+              For candidates, it means a process run by someone who understands the reality of technical and operational roles, the career paths behind them, and the way those paths intersect with evolving regulation and finance.
+            </p>
+            <p class="founder-footnote">
+              A full founder profile will sit here in due course. For now, the focus is simple: do excellent work, mandate by mandate.
+            </p>
+          </div>
+          <div class="founder-photo-wrapper" aria-hidden="true">
+            <div class="founder-photo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example Mandates -->
+    <section id="roles" class="section-charcoal">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Example Mandates</div>
+          <h2>Illustrative roles we work on</h2>
+          <p>
+            Live work is confidential. The examples below show the level and type of mandates we typically support. All details are anonymised.
+          </p>
+        </div>
+
+        <div class="roles-grid">
+          <article class="role-card">
+            <div class="role-label">Airline · Line Maintenance</div>
+            <div class="role-title">Head of Line Maintenance – European Airline</div>
+            <p class="role-meta">
+              Fleet of narrow-body aircraft operating high-frequency routes. Mandate focused on improving on-time performance, stabilising rostered coverage and tightening safety / compliance reporting.
+            </p>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">MRO · Base Maintenance</div>
+            <div class="role-title">Base Maintenance Manager – Independent MRO</div>
+            <p class="role-meta">
+              Multi-bay facility with mixed fleet inputs. Search centred on leadership of hangar productivity, turnaround times and coordination with planning, materials and commercial teams.
+            </p>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">OEM · Engineering</div>
+            <div class="role-title">Engineering Manager – Aerospace OEM</div>
+            <p class="role-meta">
+              Functional lead across systems and structures teams on a long-cycle programme. Focus on design assurance, certification interface and integration with manufacturing engineering.
+            </p>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">Infrastructure · Operations</div>
+            <div class="role-title">Head of Operations – Asset-Heavy Infrastructure</div>
+            <p class="role-meta">
+              Leadership role in a regulated infrastructure business, responsible for asset availability, maintenance strategy and control-room operations in a multi-stakeholder environment.
+            </p>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">Group · Technical Leadership</div>
+            <div class="role-title">Group Technical Director – Aviation Group</div>
+            <p class="role-meta">
+              Group-level mandate overseeing technical standards, fleet strategy and airworthiness governance across multiple AOCs, with direct interaction with regulators and lessors.
+            </p>
+          </article>
+
+          <article class="role-card">
+            <div class="role-label">Future-facing</div>
+            <div class="role-title">COO / Operations Director – Industrial Technology</div>
+            <p class="role-meta">
+              Future-facing brief within an industrial technology or infrastructure-backed platform, linking operations, engineering and asset management under a single accountable leader.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Contact</div>
+          <h2>Hiring for a critical role?</h2>
+          <p>
+            We focus on business-critical technical and leadership roles across aviation, aerospace and engineering. If you are responsible for a fleet, an asset base or a safety-critical operation, we are interested in your brief.
+          </p>
+        </div>
+
+        <div class="contact-inner">
+          <div class="contact-details">
+            <p>
+              For confidential discussions about a mandate, or to understand how we would approach search for your organisation, please get in touch directly.
+            </p>
+            <ul class="contact-list">
+              <li><span>Email</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
+              <li><span>Phone</span> <a href="tel:+442000000000">+44 (0)20 0000 0000</a></li>
+            </ul>
+            <p class="contact-meta">
+              We typically respond within one working day. For time-critical mandates, please note this in the subject line or message field.
+            </p>
+          </div>
+
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Organisation">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com">
+              </div>
+              <div class="form-group">
+                <label for="role">Role / Focus</label>
+                <input id="role" name="role" type="text" placeholder="Role, team or mandate focus">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Brief</label>
+              <textarea id="message" name="message" placeholder="Outline the role, context and timescales."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Submit enquiry
+            </button>
+            <p class="form-footnote">
+              This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Averdon Partners</div>
+          <div class="footer-tagline">
+            Executive &amp; technical search for aviation, aerospace &amp; complex engineering.
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#" aria-label="Averdon Partners on LinkedIn">LinkedIn</a>
+          <a href="mailto:info@averdonpartners.com">Email</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Averdon Partners. All rights reserved.</span>
+        <span>Registered in England &amp; Wales as AVERDON PARTNERS LIMITED.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
