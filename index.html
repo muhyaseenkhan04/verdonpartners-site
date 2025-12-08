@@ -224,19 +224,6 @@
       transform: translateY(-1px);
     }
 
-    .btn-ghost {
-      background-color: transparent;
-      color: var(--gold);
-      border-color: transparent;
-      padding-left: 0;
-    }
-
-    .btn-ghost:hover,
-    .btn-ghost:focus-visible {
-      color: #a9863f;
-      transform: translateY(-1px);
-    }
-
     /* Sections */
 
     main {
@@ -1208,54 +1195,60 @@
               <li><span>Talent</span> <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a></li>
             </ul>
             <p class="candidate-meta">
-              The form opposite is a simple way to frame your background. For now, please also email an up-to-date CV or profile to <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a>.
+              The form opposite is a simple way to frame your background. It will open an email draft to <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a>. Please attach an up-to-date CV before you send it.
             </p>
           </div>
 
-          <form class="panel" action="#" method="post" novalidate>
+          <!-- CANDIDATE FORM: mailto:talent -->
+          <form
+            class="panel"
+            action="mailto:talent@averdonpartners.com"
+            method="post"
+            enctype="text/plain"
+          >
             <div class="form-row">
               <div class="form-group">
                 <label for="cand-name">Name</label>
-                <input id="cand-name" name="name" type="text" autocomplete="name" placeholder="Your full name">
+                <input id="cand-name" name="Name" type="text" autocomplete="name" placeholder="Your full name">
               </div>
               <div class="form-group">
                 <label for="cand-email">Email</label>
-                <input id="cand-email" name="email" type="email" autocomplete="email" placeholder="name@provider.com">
+                <input id="cand-email" name="Email" type="email" autocomplete="email" placeholder="name@provider.com">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="cand-role">Current Role</label>
-                <input id="cand-role" name="current_role" type="text" placeholder="Job title">
+                <input id="cand-role" name="Current role" type="text" placeholder="Job title">
               </div>
               <div class="form-group">
                 <label for="cand-company">Current Employer</label>
-                <input id="cand-company" name="current_company" type="text" placeholder="Organisation">
+                <input id="cand-company" name="Current employer" type="text" placeholder="Organisation">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="cand-location">Location</label>
-                <input id="cand-location" name="location" type="text" placeholder="City / Country">
+                <input id="cand-location" name="Location" type="text" placeholder="City / Country">
               </div>
               <div class="form-group">
                 <label for="cand-target">Target Roles</label>
-                <input id="cand-target" name="target_roles" type="text" placeholder="Roles or level you’re considering">
+                <input id="cand-target" name="Target roles" type="text" placeholder="Roles or level you’re considering">
               </div>
             </div>
 
             <div class="form-group">
               <label for="cand-notes">Context</label>
-              <textarea id="cand-notes" name="notes" placeholder="Briefly outline your experience, notice period and what you’re open to next."></textarea>
+              <textarea id="cand-notes" name="Context" placeholder="Briefly outline your experience, notice period and what you’re open to next."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">
-              Share profile outline
+              Open email draft to talent@
             </button>
             <p class="form-footnote">
-              This form is for high-level context only and is not yet connected to an applicant tracking system. Please email an up-to-date CV to <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a> so we can review your profile properly.
+              Submitting this form will open your default email client with these details in the body, addressed to <strong>talent@averdonpartners.com</strong>. Please attach your CV in that email before sending.
             </p>
           </form>
         </div>
@@ -1290,39 +1283,45 @@
             </p>
           </div>
 
-          <form class="panel" action="#" method="post">
+          <!-- CLIENT CONTACT FORM: mailto:clients -->
+          <form
+            class="panel"
+            action="mailto:clients@averdonpartners.com"
+            method="post"
+            enctype="text/plain"
+          >
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name">
+                <input id="name" name="Name" type="text" autocomplete="name" placeholder="Your full name">
               </div>
               <div class="form-group">
                 <label for="company">Company</label>
-                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Organisation">
+                <input id="company" name="Company" type="text" autocomplete="organization" placeholder="Organisation">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com">
+                <input id="email" name="Email" type="email" autocomplete="email" placeholder="name@company.com">
               </div>
               <div class="form-group">
                 <label for="role">Role / Focus</label>
-                <input id="role" name="role" type="text" placeholder="Role, team or mandate focus">
+                <input id="role" name="Role / focus" type="text" placeholder="Role, team or mandate focus">
               </div>
             </div>
 
             <div class="form-group">
               <label for="message">Brief</label>
-              <textarea id="message" name="message" placeholder="Outline the role, context, stakeholders and timescales."></textarea>
+              <textarea id="message" name="Brief" placeholder="Outline the role, context, stakeholders and timescales."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">
-              Submit enquiry
+              Open email draft to clients@
             </button>
             <p class="form-footnote">
-              This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data. For NDAs and formal documentation, contact <a href="mailto:legal@averdonpartners.com">legal@averdonpartners.com</a>.
+              Submitting this form will open your default email client with these details in the body, addressed to <strong>clients@averdonpartners.com</strong>. For NDAs and formal documentation, contact <a href="mailto:legal@averdonpartners.com">legal@averdonpartners.com</a>.
             </p>
           </form>
         </div>
