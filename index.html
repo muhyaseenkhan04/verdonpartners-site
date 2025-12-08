@@ -6,11 +6,11 @@
   <title>Averdon Partners – Executive & Technical Search</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Averdon Partners is a specialist executive & technical search firm for aviation, aerospace and asset-heavy engineering, focused on business-critical technical and leadership roles in safety-critical, regulated environments.">
+  <meta name="description" content="Averdon Partners is a specialist executive & technical search firm for aviation, aerospace and complex engineering, focused on business-critical technical and leadership roles in asset-heavy, safety-critical and regulated environments.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Averdon Partners – Executive & Technical Search">
-  <meta property="og:description" content="Specialist executive & technical search for aviation, aerospace and asset-heavy operations. Low-volume, research-led mandates in safety-critical, regulated environments.">
+  <meta property="og:description" content="Specialist executive & technical search for aviation, aerospace and complex engineering. Low-volume, research-led mandates in asset-heavy, safety-critical operations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.averdonpartners.com/">
   <meta property="og:image" content="https://www.averdonpartners.com/og-image-placeholder.jpg">
@@ -321,11 +321,11 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 1.6rem;
+      gap: 1.8rem;
     }
 
     .hero-content {
-      max-width: 760px;
+      max-width: 720px;
     }
 
     .hero .eyebrow {
@@ -339,18 +339,18 @@
     .hero-lead {
       color: rgba(248, 247, 244, 0.86);
       font-size: 0.98rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.9rem;
     }
 
     .hero-subtext {
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       color: rgba(248, 247, 244, 0.7);
     }
 
@@ -549,43 +549,38 @@
       margin-bottom: 0;
     }
 
-    /* Contact & Candidates */
+    /* Contact */
 
-    .split-layout {
+    .contact-inner {
       display: grid;
       grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
       gap: 2.2rem;
       align-items: flex-start;
     }
 
-    .contact-details p,
-    .candidate-copy p {
+    .contact-details p {
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
     }
 
-    .contact-meta,
-    .candidate-meta {
+    .contact-meta {
       font-size: 0.85rem;
       color: rgba(248, 247, 244, 0.78);
       margin-top: 0.35rem;
     }
 
-    .contact-list,
-    .candidate-list {
+    .contact-list {
       list-style: none;
       padding: 0;
       margin: 0.8rem 0 0;
       font-size: 0.9rem;
     }
 
-    .contact-list li,
-    .candidate-list li {
+    .contact-list li {
       margin-bottom: 0.3rem;
     }
 
-    .contact-list span,
-    .candidate-list span {
+    .contact-list span {
       display: inline-block;
       min-width: 4.3rem;
       color: rgba(248, 247, 244, 0.7);
@@ -594,26 +589,27 @@
       letter-spacing: 0.13em;
     }
 
-    .panel {
+    .contact-forms {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .contact-form {
       border-radius: 0.75rem;
       padding: 1.6rem 1.5rem;
       background: rgba(11, 22, 40, 0.96);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .candidate-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.6rem 0 0.8rem;
+    .contact-form h3 {
+      color: #F7F6F2;
+      margin-bottom: 0.4rem;
     }
 
-    .candidate-pill {
-      border-radius: 999px;
-      padding: 0.25rem 0.7rem;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      font-size: 0.78rem;
-      color: rgba(248, 247, 244, 0.86);
+    .contact-form p {
+      font-size: 0.85rem;
+      color: rgba(248, 247, 244, 0.8);
+      margin-bottom: 0.9rem;
     }
 
     .form-row {
@@ -784,7 +780,7 @@
         justify-content: flex-start;
       }
 
-      .split-layout {
+      .contact-inner {
         grid-template-columns: minmax(0, 1fr);
       }
     }
@@ -854,11 +850,11 @@
       <nav aria-label="Primary">
         <div class="nav-links">
           <a href="#about">About</a>
-          <a href="#services">What we do</a>
-          <a href="#sectors">Industries</a>
+          <a href="#sectors">Sectors</a>
+          <a href="#services">Services</a>
+          <a href="#roles">Mandates</a>
           <a href="#approach">Approach</a>
           <a href="#founder">Founder</a>
-          <a href="#candidates">Candidates</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -880,7 +876,7 @@
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">For Clients</a>
-            <a href="#candidates" class="btn btn-secondary">For Candidates</a>
+            <a href="#contact" class="btn btn-secondary">For Candidates</a>
           </div>
           <p class="hero-subtext">
             Low-volume, research-led mandates with a founder who understands both the hangar and the boardroom.
@@ -905,14 +901,14 @@
       </div>
     </section>
 
-    <!-- Industries / Sectors -->
+    <!-- Sectors -->
     <section id="sectors" class="section-light">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Industries We Serve</div>
-          <h2>Aviation, aerospace &amp; complex engineering first</h2>
+          <div class="eyebrow">Sectors We Serve</div>
+          <h2>Aviation, aerospace &amp; complex engineering</h2>
           <p>
-            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Work today is centred on aviation and engineering, with selective expansion into adjacent STEM and technology mandates.
+            We focus on organisations where downtime, safety and regulation sit at the centre of the P&amp;L. Typical mandates span European and UK-based operations.
           </p>
         </div>
 
@@ -960,10 +956,10 @@
           </div>
 
           <div class="card">
-            <div class="card-tag">Asset-heavy &amp; STEM</div>
-            <h3>Infrastructure &amp; STEM Technology <span style="font-weight:400;">(Phase 2)</span></h3>
+            <div class="card-tag">Future-facing</div>
+            <h3>Asset-Heavy Infrastructure &amp; Industrial Technology</h3>
             <p>
-              As relationships develop, we support leadership hiring across broader infrastructure and selected STEM / technology portfolios with asset-heavy or safety-critical characteristics.
+              As relationships develop, we support leadership hiring across broader infrastructure and industrial technology portfolios.
             </p>
             <ul class="bullet-list">
               <li>COO / Head of Operations</li>
@@ -976,14 +972,14 @@
       </div>
     </section>
 
-    <!-- What we do / Services -->
+    <!-- Services -->
     <section id="services" class="section-charcoal">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">What We Do</div>
+          <div class="eyebrow">Services</div>
           <h2>Executive &amp; technical search, built for the long term</h2>
           <p>
-            We keep mandate volume intentionally low. Every search is founder-led, research-backed and run with the discipline you would expect from a law firm or advisory boutique.
+            We keep our mandate volume intentionally low. Every search is founder-led, research-backed and run with the discipline you would expect from a law firm or advisory boutique.
           </p>
         </div>
 
@@ -996,8 +992,8 @@
             </p>
             <ul class="bullet-list">
               <li>Mandates scoped around risk, regulation and commercial impact</li>
-              <li>Structured research and market-mapping before shortlists are finalised</li>
-              <li>Interviews focused on track record, operating context and leadership behaviour</li>
+              <li>Full research and market-mapping before shortlist is finalised</li>
+              <li>Structured interviews with a focus on track record and operating context</li>
               <li>Shortlists you can put in front of your board, regulator or owner with confidence</li>
             </ul>
           </div>
@@ -1165,96 +1161,6 @@
       </div>
     </section>
 
-    <!-- Candidates -->
-    <section id="candidates" class="section-dark">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">For Candidates</div>
-          <h2>Senior technical &amp; operational talent</h2>
-          <p>
-            We work with experienced engineers, maintenance leaders and operational managers who are accountable for availability, safety and performance – not just activity. If that sounds like you, we want you on our radar.
-          </p>
-        </div>
-
-        <div class="split-layout">
-          <div class="candidate-copy">
-            <p>
-              Typical profiles include:
-            </p>
-            <div class="candidate-pill-row">
-              <span class="candidate-pill">B1 / B2 Licensed Engineers</span>
-              <span class="candidate-pill">Line &amp; Base Maintenance Managers</span>
-              <span class="candidate-pill">Engineering Managers</span>
-              <span class="candidate-pill">CAMO &amp; Airworthiness Leaders</span>
-              <span class="candidate-pill">Operations &amp; Fleet Leaders</span>
-            </div>
-            <p>
-              We are selective. We do not run high-volume registration campaigns or junior CV databases. When you share your details, they are reviewed with the same discipline we apply to mandates.
-            </p>
-            <ul class="candidate-list">
-              <li><span>Talent</span> <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a></li>
-            </ul>
-            <p class="candidate-meta">
-              The form opposite is a simple way to frame your background. It will open an email draft to <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a>. Please attach an up-to-date CV before you send it.
-            </p>
-          </div>
-
-          <!-- CANDIDATE FORM: mailto:talent -->
-          <form
-            class="panel"
-            action="mailto:talent@averdonpartners.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cand-name">Name</label>
-                <input id="cand-name" name="Name" type="text" autocomplete="name" placeholder="Your full name">
-              </div>
-              <div class="form-group">
-                <label for="cand-email">Email</label>
-                <input id="cand-email" name="Email" type="email" autocomplete="email" placeholder="name@provider.com">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cand-role">Current Role</label>
-                <input id="cand-role" name="Current role" type="text" placeholder="Job title">
-              </div>
-              <div class="form-group">
-                <label for="cand-company">Current Employer</label>
-                <input id="cand-company" name="Current employer" type="text" placeholder="Organisation">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="cand-location">Location</label>
-                <input id="cand-location" name="Location" type="text" placeholder="City / Country">
-              </div>
-              <div class="form-group">
-                <label for="cand-target">Target Roles</label>
-                <input id="cand-target" name="Target roles" type="text" placeholder="Roles or level you’re considering">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="cand-notes">Context</label>
-              <textarea id="cand-notes" name="Context" placeholder="Briefly outline your experience, notice period and what you’re open to next."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-              Open email draft to talent@
-            </button>
-            <p class="form-footnote">
-              Submitting this form will open your default email client with these details in the body, addressed to <strong>talent@averdonpartners.com</strong>. Please attach your CV in that email before sending.
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <!-- Contact -->
     <section id="contact" class="section-dark">
       <div class="container">
@@ -1266,64 +1172,187 @@
           </p>
         </div>
 
-        <div class="split-layout">
+        <div class="contact-inner">
           <div class="contact-details">
             <p>
-              For confidential discussions about a mandate, or to understand how we would approach search for your organisation, please get in touch directly.
+              For confidential discussions about a mandate, or to understand how we would approach search for your organisation, please use the client form. For general or info enquiries, use the general contact form.
             </p>
             <ul class="contact-list">
+              <li><span>Email</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
               <li><span>Clients</span> <a href="mailto:clients@averdonpartners.com">clients@averdonpartners.com</a></li>
-              <li><span>Talent</span> <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a></li>
-              <li><span>General</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
-              <li><span>Legal</span> <a href="mailto:legal@averdonpartners.com">legal@averdonpartners.com</a></li>
-              <li><span>Phone</span> <a href="tel:+442000000000">+44 (0)20 0000 0000</a></li>
             </ul>
             <p class="contact-meta">
-              We typically respond within one working day. For time-critical mandates, please flag this in the subject line or opening paragraph.
+              We typically respond within one working day. For time-critical mandates, please note this in the subject line or message field.
             </p>
           </div>
 
-          <!-- CLIENT CONTACT FORM: mailto:clients -->
-          <form
-            class="panel"
-            action="mailto:clients@averdonpartners.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input id="name" name="Name" type="text" autocomplete="name" placeholder="Your full name">
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input id="company" name="Company" type="text" autocomplete="organization" placeholder="Organisation">
-              </div>
-            </div>
+          <div class="contact-forms">
+            <!-- Client enquiries form -->
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/mldqwjzz"
+              method="POST"
+            >
+              <h3>Client enquiries</h3>
+              <p>For hiring managers, leadership teams and owners with a brief or upcoming mandate.</p>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="Email" type="email" autocomplete="email" placeholder="name@company.com">
-              </div>
-              <div class="form-group">
-                <label for="role">Role / Focus</label>
-                <input id="role" name="Role / focus" type="text" placeholder="Role, team or mandate focus">
-              </div>
-            </div>
+              <input type="hidden" name="_subject" value="[Averdon] Client enquiry via website">
+              <input type="hidden" name="_template" value="table">
 
-            <div class="form-group">
-              <label for="message">Brief</label>
-              <textarea id="message" name="Brief" placeholder="Outline the role, context, stakeholders and timescales."></textarea>
-            </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="client-name">Name</label>
+                  <input
+                    id="client-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Your full name"
+                    required
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="client-company">Company</label>
+                  <input
+                    id="client-company"
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    placeholder="Organisation"
+                    required
+                  >
+                </div>
+              </div>
 
-            <button type="submit" class="btn btn-primary">
-              Open email draft to clients@
-            </button>
-            <p class="form-footnote">
-              Submitting this form will open your default email client with these details in the body, addressed to <strong>clients@averdonpartners.com</strong>. For NDAs and formal documentation, contact <a href="mailto:legal@averdonpartners.com">legal@averdonpartners.com</a>.
-            </p>
-          </form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="client-email">Email</label>
+                  <input
+                    id="client-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="name@company.com"
+                    required
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="client-role">Role / Focus</label>
+                  <input
+                    id="client-role"
+                    name="role_focus"
+                    type="text"
+                    placeholder="Role, team or mandate focus"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="client-message">Brief</label>
+                <textarea
+                  id="client-message"
+                  name="message"
+                  placeholder="Outline the role, context, location and timescales."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Honeypot -->
+              <div style="display:none;">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Submit client enquiry
+              </button>
+              <p class="form-footnote">
+                This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
+              </p>
+            </form>
+
+            <!-- General / info enquiries form -->
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xvgebklz"
+              method="POST"
+            >
+              <h3>General / info enquiries</h3>
+              <p>For candidates, general questions and other contact that is not a specific hiring brief.</p>
+
+              <input type="hidden" name="_subject" value="[Averdon] General enquiry via website">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="info-name">Name</label>
+                  <input
+                    id="info-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Your full name"
+                    required
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="info-company">Company (optional)</label>
+                  <input
+                    id="info-company"
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    placeholder="Organisation (if applicable)"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="info-email">Email</label>
+                  <input
+                    id="info-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="name@example.com"
+                    required
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="info-type">Enquiry type</label>
+                  <input
+                    id="info-type"
+                    name="enquiry_type"
+                    type="text"
+                    placeholder="Candidate / general / other"
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="info-message">Message</label>
+                <textarea
+                  id="info-message"
+                  name="message"
+                  placeholder="Outline your question or context."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Honeypot -->
+              <div style="display:none;">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Submit general enquiry
+              </button>
+              <p class="form-footnote">
+                This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
