@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Averdon Partners – Executive & Technical Search</title>
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.averdonpartners.com/">
+
   <!-- SEO Meta -->
   <meta name="description" content="Averdon Partners is a specialist executive & technical search firm for aviation, aerospace and complex engineering, focused on business-critical technical and leadership roles in asset-heavy, safety-critical and regulated environments.">
 
@@ -13,835 +16,21 @@
   <meta property="og:description" content="Specialist executive & technical search for aviation, aerospace and complex engineering. Low-volume, research-led mandates in asset-heavy, safety-critical operations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.averdonpartners.com/">
-  <meta property="og:image" content="https://www.averdonpartners.com/og-image-placeholder.jpg">
+  <meta property="og:image" content="https://www.averdonpartners.com/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --navy: #0B1628;
-      --navy-soft: #121a2e;
-      --charcoal: #1B2027;
-      --light-grey: #D8D4CC;
-      --mid-grey: #8C8680;
-      --gold: #C2A05A;
-      --white: #FFFFFF;
-      --off-white: #F4F2EC;
-      --border-soft: rgba(12, 18, 30, 0.08);
-      --text-dark: #191919;
-      --text-muted: #5B5750;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--off-white);
-      color: var(--text-dark);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.75rem;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', "Times New Roman", serif;
-      letter-spacing: 0.02em;
-      margin-top: 0;
-      color: var(--text-dark);
-    }
-
-    h1 {
-      font-size: clamp(2.6rem, 3.2vw, 3.3rem);
-      line-height: 1.12;
-    }
-
-    h2 {
-      font-size: clamp(2.0rem, 2.4vw, 2.3rem);
-      margin-bottom: 1.1rem;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.65rem;
-    }
-
-    p {
-      margin-top: 0;
-      margin-bottom: 0.9rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    /* Header & Navigation */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(12px);
-      background: linear-gradient(to bottom, rgba(11, 22, 40, 0.97), rgba(11, 22, 40, 0.9));
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .site-header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding: 1rem 0;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-family: 'Playfair Display', "Times New Roman", serif;
-      font-size: 1.25rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--white);
-      white-space: nowrap;
-    }
-
-    .brand span {
-      font-weight: 600;
-    }
-
-    nav {
-      flex: 1 1 auto;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.6rem;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .nav-links a {
-      position: relative;
-      opacity: 0.86;
-      color: var(--light-grey);
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.3rem;
-      width: 0;
-      height: 1px;
-      background-color: var(--gold);
-      transition: width 0.2s ease;
-    }
-
-    .nav-links a:hover::after,
-    .nav-links a:focus-visible::after {
-      width: 100%;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      opacity: 1;
-      color: var(--white);
-    }
-
-    .header-cta {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex: 0 0 auto;
-    }
-
-    /* Buttons */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.6rem 1.5rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.08s ease;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background-color: var(--gold);
-      color: var(--charcoal);
-      border-color: var(--gold);
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus-visible {
-      background-color: #b18e48;
-      border-color: #b18e48;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.45);
-    }
-
-    .btn-secondary:hover,
-    .btn-secondary:focus-visible {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-1px);
-    }
-
-    /* Sections */
-
-    main {
-      padding-bottom: 4rem;
-    }
-
-    section {
-      padding: 4rem 0;
-    }
-
-    .section-dark {
-      background-color: var(--navy-soft);
-      color: var(--white);
-    }
-
-    .section-dark h1,
-    .section-dark h2,
-    .section-dark h3,
-    .section-dark h4 {
-      color: #F7F6F2;
-    }
-
-    .section-light {
-      background-color: var(--white);
-      color: var(--text-dark);
-    }
-
-    .section-light h2,
-    .section-light h3 {
-      color: var(--text-dark);
-    }
-
-    .section-charcoal {
-      background-color: var(--charcoal);
-      color: var(--white);
-    }
-
-    .section-charcoal h2,
-    .section-charcoal h3 {
-      color: #F7F6F2;
-    }
-
-    .section-header {
-      max-width: 640px;
-      margin-bottom: 2.1rem;
-    }
-
-    .section-header p {
-      margin-bottom: 0.7rem;
-    }
-
-    .section-dark .section-header p,
-    .section-charcoal .section-header p {
-      color: rgba(247, 246, 242, 0.82);
-    }
-
-    .section-light .section-header p {
-      color: var(--text-muted);
-    }
-
-    .eyebrow {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--mid-grey);
-      margin-bottom: 0.4rem;
-    }
-
-    .section-dark .eyebrow,
-    .section-charcoal .eyebrow {
-      color: #B1A894;
-    }
-
-    /* Hero */
-
-    .hero {
-      position: relative;
-      background: radial-gradient(circle at top left, rgba(194, 160, 90, 0.12), transparent 60%),
-                  var(--navy);
-      color: var(--white);
-      padding: 5rem 0 4.5rem;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(11, 22, 40, 0.3), rgba(11, 22, 40, 1));
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .hero .eyebrow {
-      color: #C9C4B6;
-    }
-
-    .hero h1 {
-      color: #F8F7F4;
-    }
-
-    .hero-lead {
-      color: rgba(248, 247, 244, 0.86);
-      font-size: 0.98rem;
-      margin-bottom: 1.3rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-subtext {
-      font-size: 0.85rem;
-      color: rgba(248, 247, 244, 0.7);
-    }
-
-    /* Grids & Cards */
-
-    .grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .card {
-      border-radius: 0.75rem;
-      padding: 1.4rem 1.5rem;
-      background: var(--white);
-      border: 1px solid var(--border-soft);
-    }
-
-    .section-charcoal .card,
-    .section-dark .card {
-      background: rgba(17, 23, 37, 0.96);
-      border-color: rgba(255, 255, 255, 0.06);
-    }
-
-    .card-tag {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--mid-grey);
-      margin-bottom: 0.35rem;
-    }
-
-    .section-dark .card-tag,
-    .section-charcoal .card-tag {
-      color: rgba(248, 247, 244, 0.68);
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      margin-bottom: 0.45rem;
-    }
-
-    ul.bullet-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.6rem 0 0;
-    }
-
-    ul.bullet-list li {
-      position: relative;
-      padding-left: 1.1rem;
-      font-size: 0.9rem;
-      margin-bottom: 0.28rem;
-    }
-
-    ul.bullet-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--gold);
-    }
-
-    /* Approach steps */
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .step {
-      border-radius: 0.75rem;
-      padding: 1.2rem 1.25rem 1.15rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(11, 22, 40, 0.9);
-    }
-
-    .step-number {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--gold);
-      margin-bottom: 0.25rem;
-    }
-
-    .step-title {
-      font-size: 0.96rem;
-      font-weight: 500;
-      margin-bottom: 0.35rem;
-      color: #F7F6F2;
-    }
-
-    .step p {
-      font-size: 0.85rem;
-      color: rgba(248, 247, 244, 0.8);
-      margin-bottom: 0;
-    }
-
-    /* Founder */
-
-    .founder-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 2.2rem;
-      align-items: center;
-    }
-
-    .founder-meta {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0.7rem;
-    }
-
-    .founder-highlight {
-      font-size: 0.94rem;
-      font-weight: 500;
-      color: #3A352F;
-      margin-bottom: 0.85rem;
-    }
-
-    .founder-photo-wrapper {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .founder-photo {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 2px solid var(--border-soft);
-      background: radial-gradient(circle at 30% 20%, #ffffff, #d8d4cc);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .founder-photo::after {
-      content: "Headshot";
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #8A8378;
-    }
-
-    .founder-footnote {
-      font-size: 0.78rem;
-      color: #7A7469;
-      margin-top: 0.45rem;
-    }
-
-    /* Roles */
-
-    .roles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.3rem;
-    }
-
-    .role-card {
-      border-radius: 0.8rem;
-      padding: 1.25rem 1.3rem;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background: rgba(23, 28, 37, 0.98);
-    }
-
-    .role-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: rgba(248, 247, 244, 0.7);
-      margin-bottom: 0.35rem;
-    }
-
-    .role-title {
-      font-size: 0.98rem;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-      color: #F7F6F2;
-    }
-
-    .role-meta {
-      font-size: 0.85rem;
-      color: rgba(248, 247, 244, 0.78);
-      margin-bottom: 0;
-    }
-
-    /* Contact */
-
-    .contact-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
-      gap: 2.2rem;
-      align-items: flex-start;
-    }
-
-    .contact-details p {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-meta {
-      font-size: 0.85rem;
-      color: rgba(248, 247, 244, 0.78);
-      margin-top: 0.35rem;
-    }
-
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0.8rem 0 0;
-      font-size: 0.9rem;
-    }
-
-    .contact-list li {
-      margin-bottom: 0.3rem;
-    }
-
-    .contact-list span {
-      display: inline-block;
-      min-width: 4.8rem;
-      color: rgba(248, 247, 244, 0.7);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-    }
-
-    .contact-forms {
-      width: 100%;
-    }
-
-    .contact-form-wrapper + .contact-form-wrapper {
-      margin-top: 1.5rem;
-    }
-
-    .contact-form-heading {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin: 0 0 0.5rem;
-      color: rgba(248, 247, 244, 0.8);
-    }
-
-    .contact-form {
-      border-radius: 0.75rem;
-      padding: 1.6rem 1.5rem;
-      background: rgba(11, 22, 40, 0.96);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    label {
-      display: block;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      margin-bottom: 0.3rem;
-      color: rgba(248, 247, 244, 0.85);
-    }
-
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea {
-      width: 100%;
-      border-radius: 0.55rem;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background-color: rgba(11, 22, 40, 0.98);
-      color: var(--white);
-      padding: 0.65rem 0.75rem;
-      font-family: inherit;
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.16s ease, box-shadow 0.16s ease;
-    }
-
-    input[type="text"]::placeholder,
-    input[type="email"]::placeholder,
-    textarea::placeholder {
-      color: rgba(248, 247, 244, 0.45);
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 1px rgba(194, 160, 90, 0.25);
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-footnote {
-      font-size: 0.78rem;
-      color: rgba(248, 247, 244, 0.7);
-      margin-top: 0.5rem;
-    }
-
-    /* Footer */
-
-    .site-footer {
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
-      background-color: #050910;
-      padding: 1.8rem 0 1.4rem;
-      font-size: 0.82rem;
-      color: rgba(248, 247, 244, 0.78);
-    }
-
-    .footer-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      margin-bottom: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      font-family: 'Playfair Display', "Times New Roman", serif;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      color: #F7F6F2;
-    }
-
-    .footer-tagline {
-      font-size: 0.82rem;
-      color: rgba(248, 247, 244, 0.72);
-    }
-
-    .footer-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      opacity: 0.82;
-      color: rgba(248, 247, 244, 0.78);
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus-visible {
-      opacity: 1;
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 0.7rem;
-      margin-top: 0.7rem;
-      font-size: 0.78rem;
-    }
-
-    .footer-bottom span {
-      opacity: 0.88;
-    }
-
-    /* Responsive */
-
-    @media (max-width: 1100px) {
-      .roles-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .grid-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 960px) {
-      .site-header-inner {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        padding-top: 0.35rem;
-      }
-
-      .header-cta {
-        order: 2;
-      }
-
-      .steps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .founder-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .founder-photo-wrapper {
-        justify-content: flex-start;
-      }
-
-      .contact-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 3.2rem 0;
-      }
-
-      .hero {
-        padding-top: 4.2rem;
-        padding-bottom: 3.4rem;
-      }
-
-      .nav-links {
-        gap: 1rem;
-        font-size: 0.76rem;
-      }
-
-      .hero-actions {
-        flex-direction: row;
-        gap: 0.7rem;
-      }
-
-      .btn {
-        width: auto;
-      }
-
-      .grid-3,
-      .grid-2,
-      .roles-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .steps {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .form-row {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .footer-top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-links {
-        padding-top: 0.3rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
@@ -861,7 +50,7 @@
         </div>
       </nav>
       <div class="header-cta">
-        <a href="#contact" class="btn btn-primary">Talk to us</a>
+        <a href="#client-enquiry" class="btn btn-primary">Talk to us</a>
       </div>
     </div>
   </header>
@@ -874,11 +63,11 @@
           <div class="eyebrow">Specialist Executive & Technical Search</div>
           <h1>Executive & Technical Search for Aviation, Aerospace & Asset-Heavy Operations</h1>
           <p class="hero-lead">
-            Averdon Partners works with COOs, CEOs, Heads of Maintenance and Heads of Engineering in airlines, MROs and engineering-led businesses on business-critical technical and leadership hires across asset-heavy, safety-critical and regulated operations.
+            Averdon Partners helps COOs, CEOs, Heads of Maintenance and Heads of Engineering in airlines, MROs and engineering-led businesses secure the technical and leadership talent that keeps fleets flying, assets available and regulators calm.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">For Clients</a>
-            <a href="#contact" class="btn btn-secondary">For Candidates</a>
+            <a href="#client-enquiry" class="btn btn-primary">For Clients</a>
+            <a href="#candidate-enquiry" class="btn btn-secondary">For Candidates</a>
           </div>
           <p class="hero-subtext">
             If you're accountable for a fleet, an asset base or a control room, this site is written for you.
@@ -1098,7 +287,7 @@
               For candidates, it means a process run by someone who understands the reality of technical and operational roles, the career paths behind them, and the way those paths intersect with evolving regulation and finance.
             </p>
             <p class="founder-footnote">
-              A full founder profile will sit here in due course. For now, the focus is simple: do excellent work, mandate by mandate.
+              The focus is deliberately narrow: a small number of mandates at any one time, run directly by the founder, so that every search stands up to scrutiny from boards, regulators and owners.
             </p>
           </div>
           <div class="founder-photo-wrapper" aria-hidden="true">
@@ -1199,7 +388,7 @@
 
           <div class="contact-forms">
             <!-- Clients form -->
-            <div class="contact-form-wrapper">
+            <div class="contact-form-wrapper" id="client-enquiry">
               <div class="contact-form-heading">Client enquiries</div>
               <form
                 class="contact-form"
@@ -1250,7 +439,7 @@
             </div>
 
             <!-- Talent form -->
-            <div class="contact-form-wrapper">
+            <div class="contact-form-wrapper" id="candidate-enquiry">
               <div class="contact-form-heading">Talent / candidate enquiries</div>
               <form
                 class="contact-form"
@@ -1301,7 +490,7 @@
             </div>
 
             <!-- General contact form -->
-            <div class="contact-form-wrapper">
+            <div class="contact-form-wrapper" id="general-enquiry">
               <div class="contact-form-heading">General contact</div>
               <form
                 class="contact-form"
@@ -1368,8 +557,8 @@
         <div class="footer-links">
           <a href="#" aria-label="Averdon Partners on LinkedIn">LinkedIn</a>
           <a href="mailto:info@averdonpartners.com">Email</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms &amp; Conditions</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1380,3 +569,4 @@
   </footer>
 </body>
 </html>
+
