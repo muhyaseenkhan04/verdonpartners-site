@@ -210,6 +210,9 @@ main {
 section {
   padding: 4rem 0;
 }
+ {
+  scroll-margin-top: 90px;
+}
 
 .section-dark {
   background-color: var(--navy-soft);
