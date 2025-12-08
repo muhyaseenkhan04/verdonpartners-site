@@ -582,16 +582,11 @@
 
     .contact-list span {
       display: inline-block;
-      min-width: 4.3rem;
+      min-width: 4.8rem;
       color: rgba(248, 247, 244, 0.7);
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.13em;
-    }
-
-    .contact-forms {
-      display: grid;
-      gap: 1.25rem;
     }
 
     .contact-form {
@@ -599,17 +594,6 @@
       padding: 1.6rem 1.5rem;
       background: rgba(11, 22, 40, 0.96);
       border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .contact-form h3 {
-      color: #F7F6F2;
-      margin-bottom: 0.4rem;
-    }
-
-    .contact-form p {
-      font-size: 0.85rem;
-      color: rgba(248, 247, 244, 0.8);
-      margin-bottom: 0.9rem;
     }
 
     .form-row {
@@ -633,6 +617,7 @@
 
     input[type="text"],
     input[type="email"],
+    select,
     textarea {
       width: 100%;
       border-radius: 0.55rem;
@@ -654,6 +639,7 @@
 
     input[type="text"]:focus,
     input[type="email"]:focus,
+    select:focus,
     textarea:focus {
       border-color: var(--gold);
       box-shadow: 0 0 0 1px rgba(194, 160, 90, 0.25);
@@ -1175,184 +1161,74 @@
         <div class="contact-inner">
           <div class="contact-details">
             <p>
-              For confidential discussions about a mandate, or to understand how we would approach search for your organisation, please use the client form. For general or info enquiries, use the general contact form.
+              For confidential discussions about a mandate, or to understand how we would approach search for your organisation, please get in touch directly.
             </p>
             <ul class="contact-list">
-              <li><span>Email</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
               <li><span>Clients</span> <a href="mailto:clients@averdonpartners.com">clients@averdonpartners.com</a></li>
+              <li><span>Talent</span> <a href="mailto:talent@averdonpartners.com">talent@averdonpartners.com</a></li>
+              <li><span>General</span> <a href="mailto:info@averdonpartners.com">info@averdonpartners.com</a></li>
             </ul>
             <p class="contact-meta">
               We typically respond within one working day. For time-critical mandates, please note this in the subject line or message field.
             </p>
           </div>
 
-          <div class="contact-forms">
-            <!-- Client enquiries form -->
-            <form
-              class="contact-form"
-              action="https://formspree.io/f/mldqwjzz"
-              method="POST"
-            >
-              <h3>Client enquiries</h3>
-              <p>For hiring managers, leadership teams and owners with a brief or upcoming mandate.</p>
+          <!-- FormSubmit-backed contact form -->
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/info@averdonpartners.com"
+            method="POST"
+          >
+            <!-- FormSubmit config -->
+            <input type="hidden" name="_subject" value="Website enquiry – Averdon Partners">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Honeypot field (spam protection) -->
+            <input type="text" name="_honey" style="display:none">
 
-              <input type="hidden" name="_subject" value="[Averdon] Client enquiry via website">
-              <input type="hidden" name="_template" value="table">
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="client-name">Name</label>
-                  <input
-                    id="client-name"
-                    name="name"
-                    type="text"
-                    autocomplete="name"
-                    placeholder="Your full name"
-                    required
-                  >
-                </div>
-                <div class="form-group">
-                  <label for="client-company">Company</label>
-                  <input
-                    id="client-company"
-                    name="company"
-                    type="text"
-                    autocomplete="organization"
-                    placeholder="Organisation"
-                    required
-                  >
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="client-email">Email</label>
-                  <input
-                    id="client-email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="name@company.com"
-                    required
-                  >
-                </div>
-                <div class="form-group">
-                  <label for="client-role">Role / Focus</label>
-                  <input
-                    id="client-role"
-                    name="role_focus"
-                    type="text"
-                    placeholder="Role, team or mandate focus"
-                    required
-                  >
-                </div>
-              </div>
-
+            <div class="form-row">
               <div class="form-group">
-                <label for="client-message">Brief</label>
-                <textarea
-                  id="client-message"
-                  name="message"
-                  placeholder="Outline the role, context, location and timescales."
-                  required
-                ></textarea>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
               </div>
-
-              <!-- Honeypot -->
-              <div style="display:none;">
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-              </div>
-
-              <button type="submit" class="btn btn-primary">
-                Submit client enquiry
-              </button>
-              <p class="form-footnote">
-                This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
-              </p>
-            </form>
-
-            <!-- General / info enquiries form -->
-            <form
-              class="contact-form"
-              action="https://formspree.io/f/xvgebklz"
-              method="POST"
-            >
-              <h3>General / info enquiries</h3>
-              <p>For candidates, general questions and other contact that is not a specific hiring brief.</p>
-
-              <input type="hidden" name="_subject" value="[Averdon] General enquiry via website">
-              <input type="hidden" name="_template" value="table">
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="info-name">Name</label>
-                  <input
-                    id="info-name"
-                    name="name"
-                    type="text"
-                    autocomplete="name"
-                    placeholder="Your full name"
-                    required
-                  >
-                </div>
-                <div class="form-group">
-                  <label for="info-company">Company (optional)</label>
-                  <input
-                    id="info-company"
-                    name="company"
-                    type="text"
-                    autocomplete="organization"
-                    placeholder="Organisation (if applicable)"
-                  >
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="info-email">Email</label>
-                  <input
-                    id="info-email"
-                    name="email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="name@example.com"
-                    required
-                  >
-                </div>
-                <div class="form-group">
-                  <label for="info-type">Enquiry type</label>
-                  <input
-                    id="info-type"
-                    name="enquiry_type"
-                    type="text"
-                    placeholder="Candidate / general / other"
-                  >
-                </div>
-              </div>
-
               <div class="form-group">
-                <label for="info-message">Message</label>
-                <textarea
-                  id="info-message"
-                  name="message"
-                  placeholder="Outline your question or context."
-                  required
-                ></textarea>
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Organisation">
               </div>
+            </div>
 
-              <!-- Honeypot -->
-              <div style="display:none;">
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
               </div>
+              <div class="form-group">
+                <label for="role">Role / Focus</label>
+                <input id="role" name="role" type="text" placeholder="Role, team or mandate focus">
+              </div>
+            </div>
 
-              <button type="submit" class="btn btn-primary">
-                Submit general enquiry
-              </button>
-              <p class="form-footnote">
-                This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
-              </p>
-            </form>
-          </div>
+            <div class="form-group">
+              <label for="enquiry-type">I am a</label>
+              <select id="enquiry-type" name="enquiry_type">
+                <option value="Client">Client – hiring for my organisation</option>
+                <option value="Candidate">Candidate – exploring roles</option>
+                <option value="Other">Other / Not sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Brief</label>
+              <textarea id="message" name="message" placeholder="Outline the role, context and timescales." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Submit enquiry
+            </button>
+            <p class="form-footnote">
+              This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
+            </p>
+          </form>
         </div>
       </div>
     </section>
