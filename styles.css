@@ -1,5 +1,4 @@
- <style>
-    :root {
+      :root {
       --navy: #0B1628;
       --navy-soft: #121a2e;
       --charcoal: #1B2027;
@@ -786,4 +785,4 @@ section {
         transition: none !important;
       }
     }
-  </style>
+  
