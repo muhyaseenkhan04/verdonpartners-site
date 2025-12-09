@@ -721,6 +721,32 @@ section {
 #what-we-do .section-header p {
   color: rgba(248, 247, 244, 0.85);
 }
+/* Force white typography in "What we do" section */
+#what-we-do {
+  color: #FFFFFF;
+}
+
+#what-we-do h2,
+#what-we-do h3 {
+  color: #FFFFFF;
+}
+
+#what-we-do p,
+#what-we-do li {
+  color: #FFFFFF;
+}
+
+#what-we-do .card p {
+  color: #FFFFFF;
+}
+
+#what-we-do .card-tag {
+  color: rgba(248, 247, 244, 0.78);
+}
+
+#what-we-do .section-header p {
+  color: rgba(248, 247, 244, 0.85);
+}
 
     /* Responsive */
 
