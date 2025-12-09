@@ -1,49 +1,38 @@
 :root {
-  /* === Core Brand / Background === */
-  --navy: #0B1628;              /* Averdon Navy – main brand colour (hero, header, primary buttons) */
-  --navy-soft: #121A2E;         /* Averdon Midnight – dark cards, overlays, hovers */
-  --navy-footer: #050910;       /* Deep footer navy – footer and very dark sections */
-  --charcoal: #1B2027;          /* Strong headings, icons, rules */
+  /* Core brand / background */
+  --navy: #0B1628;                /* Averdon Navy */
+  --navy-soft: #121A2E;           /* Averdon Midnight */
+  --charcoal: #1B2027;
+  --footer-navy: #050910;
+  --off-white: #F4F2EC;
+  --white: #FFFFFF;
 
-  --off-white: #F4F2EC;         /* Main page background */
-  --white: #FFFFFF;             /* Card and content backgrounds */
+  /* Greys / neutrals */
+  --light-grey: #D8D4CC;          /* Stone */
+  --mid-grey: #8C8680;
+  --warm-light-grey: #C9C4B6;
+  --warm-mid-neutral: #B1A894;
 
-  /* === Greys / Text / Neutrals === */
-  --light-grey: #D8D4CC;        /* Light stone – cards, borders, light panels */
-  --mid-grey: #8C8680;          /* Mid grey – subtle UI/dividers */
+  /* Typography */
+  --text-dark: #191919;
+  --text-muted: #5B5750;
+  --soft-ivory-heading: #F7F6F2;
+  --hero-text-white: #F8F7F4;
 
-  --warm-light-grey: #C9C4B6;   /* Alt section backgrounds, soft strips */
-  --warm-mid-neutral: #B1A894;  /* Founder / note panels, sidebars */
+  /* Accent – Gold */
+  --gold: #C2A05A;
+  --gold-hover: #B18E48;
 
-  --text-dark: #191919;         /* Primary body text */
-  --text-muted: #5B5750;        /* Secondary text, meta, captions */
+  /* Accent – Infra / Capital Green */
+  --infra-green: #0B3D31;
+  --infra-green-soft: rgba(11, 61, 49, 0.12);
 
-  /* === Accent – Gold === */
-  --gold: #C2A05A;              /* Primary accent – small details only */
-  --gold-hover: #B18E48;        /* Darker gold – hover states, active accents */
+  /* Founder / story neutrals */
+  --founder-highlight: #3A352F;
+  --founder-footnote: #7A7469;
 
-  /* === Accent – Infra / Capital Green (NEW) === */
-  --infra-green: #0B3D31;       /* Deep forest green – infra/capital accent */
-  --infra-green-soft: rgba(11, 61, 49, 0.12); /* Very light fill for charts/tags */
-
-  /* === Ivory / Off-White Variants === */
-  --ivory-soft: #F7F6F2;        /* Soft ivory – headings on dark backgrounds */
-  --hero-text: #F8F7F4;         /* Hero body text on dark/navy */
-
-  /* === Neutral Browns (Founder / Story Blocks) === */
-  --founder-dark: #3A352F;      /* Founder highlight background */
-  --founder-muted: #7A7469;     /* Founder footnotes, muted text */
-
-  /* === Borders / Transparency === */
-  --border-soft: rgba(12, 18, 30, 0.08);     /* Default soft border on light backgrounds */
-
-  --overlay-navy: rgba(11, 22, 40, 0.9);     /* Dark overlay for modals, hero overlays */
-  --overlay-gold-soft: rgba(194, 160, 90, 0.25); /* Decorative gold tint (sparingly) */
-
-  --white-soft-06: rgba(255, 255, 255, 0.06); /* White with alpha for glass panels on dark bg */
-  --white-soft-12: rgba(255, 255, 255, 0.12);
-  --white-soft-24: rgba(255, 255, 255, 0.24);
-  --white-soft-90: rgba(255, 255, 255, 0.90); /* High-contrast text on dark bg */
+  /* Borders / overlays */
+  --border-soft: rgba(12, 18, 30, 0.08);
 }
 
 * {
@@ -220,8 +209,8 @@ nav {
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background-color: #b18e48;
-  border-color: #b18e48;
+  background-color: var(--gold-hover);
+  border-color: var(--gold-hover);
   transform: translateY(-1px);
 }
 
@@ -241,7 +230,7 @@ nav {
 /* Sections */
 
 main {
-  padding-bottom: 4rem;
+  padding-bottom: 0;
 }
 
 section {
@@ -258,7 +247,7 @@ section {
 .section-dark h2,
 .section-dark h3,
 .section-dark h4 {
-  color: #F7F6F2;
+  color: var(--soft-ivory-heading);
 }
 
 .section-light {
@@ -278,7 +267,7 @@ section {
 
 .section-charcoal h2,
 .section-charcoal h3 {
-  color: #F7F6F2;
+  color: var(--soft-ivory-heading);
 }
 
 .section-header {
@@ -309,7 +298,7 @@ section {
 
 .section-dark .eyebrow,
 .section-charcoal .eyebrow {
-  color: #B1A894;
+  color: var(--warm-mid-neutral);
 }
 
 /* Hero */
@@ -345,11 +334,11 @@ section {
 }
 
 .hero .eyebrow {
-  color: #C9C4B6;
+  color: var(--warm-light-grey);
 }
 
 .hero h1 {
-  color: #F8F7F4;
+  color: var(--hero-text-white);
 }
 
 .hero-lead {
@@ -464,7 +453,7 @@ ul.bullet-list li::before {
   font-size: 0.96rem;
   font-weight: 500;
   margin-bottom: 0.35rem;
-  color: #F7F6F2;
+  color: var(--soft-ivory-heading);
 }
 
 .step p {
@@ -473,7 +462,7 @@ ul.bullet-list li::before {
   margin-bottom: 0;
 }
 
-/* Founder */
+/* Founder – (not currently used but palette-ready) */
 
 .founder-layout {
   display: grid;
@@ -491,13 +480,13 @@ ul.bullet-list li::before {
 .founder-highlight {
   font-size: 0.94rem;
   font-weight: 500;
-  color: #3A352F;
+  color: var(--founder-highlight);
   margin-bottom: 0.85rem;
 }
 
 .founder-footnote {
   font-size: 0.78rem;
-  color: #7A7469;
+  color: var(--founder-footnote);
   margin-top: 0.45rem;
 }
 
@@ -528,7 +517,7 @@ ul.bullet-list li::before {
   font-size: 0.98rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
-  color: #F7F6F2;
+  color: var(--soft-ivory-heading);
 }
 
 .role-meta {
@@ -668,10 +657,11 @@ textarea {
 
 .site-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
-  background-color: #050910;
+  background-color: var(--footer-navy);
   padding: 1.8rem 0 1.4rem;
   font-size: 0.82rem;
   color: rgba(248, 247, 244, 0.78);
+  margin-top: 0;
 }
 
 .footer-top {
@@ -688,7 +678,7 @@ textarea {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #F7F6F2;
+  color: var(--soft-ivory-heading);
 }
 
 .footer-tagline {
@@ -736,24 +726,24 @@ textarea {
 /* "What we do" section – force white typography on charcoal background */
 
 #what-we-do {
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 /* Headings */
 #what-we-do h2,
 #what-we-do h3 {
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 /* Paragraphs + list items */
 #what-we-do p,
 #what-we-do li {
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 /* Card paragraph text – override default muted colour */
 #what-we-do .card p {
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 /* Card tags in this section – slightly softer white */
@@ -862,12 +852,3 @@ textarea {
     transition: none !important;
   }
 }
-/* Tidy up spacing between contact section and footer */
-main {
-  padding-bottom: 0;
-}
-
-.site-footer {
-  margin-top: 0;
-}
-
