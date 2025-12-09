@@ -1166,161 +1166,126 @@
               We typically respond within one working day. For time-critical mandates, please note this in the subject line or message field.
             </p>
           </div>
+<div class="contact-forms">
 
-          <div class="contact-forms">
-            <!-- Clients form -->
-            <div id="client-enquiries" class="contact-form-wrapper">
-              <div class="contact-form-heading">Client enquiries</div>
-              <form
-                class="contact-form"
-                action="https://formsubmit.co/clients@averdonpartners.com"
-                method="POST"
-              >
-                <!-- FormSubmit config -->
-                <input type="hidden" name="_subject" value="Client enquiry – Averdon Partners">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <!-- Honeypot field (spam protection) -->
-                <input type="text" name="_honey" style="display:none">
+  <!-- Anchor targets so your nav links still work -->
+  <div id="client-enquiries"></div>
+  <div id="talent-enquiries"></div>
+  <div id="general-contact"></div>
 
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="client-name">Name</label>
-                    <input id="client-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="client-company">Company</label>
-                    <input id="client-company" name="company" type="text" autocomplete="organization" placeholder="Organisation">
-                  </div>
-                </div>
+  <div class="contact-form-wrapper">
+    <div class="contact-form-heading">Send an enquiry</div>
 
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="client-email">Email</label>
-                    <input id="client-email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="client-role">Role / Focus</label>
-                    <input id="client-role" name="role" type="text" placeholder="Role, team or mandate focus">
-                  </div>
-                </div>
+    <form
+      id="unified-contact-form"
+      class="contact-form"
+      action="https://formsubmit.co/info@averdonpartners.com"
+      method="POST"
+    >
+      <!-- FormSubmit config -->
+      <input
+        type="hidden"
+        id="email-subject"
+        name="_subject"
+        value="Website enquiry – Averdon Partners"
+      >
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Honeypot field (spam protection) -->
+      <input type="text" name="_honey" style="display:none">
 
-                <div class="form-group">
-                  <label for="client-message">Brief</label>
-                  <textarea id="client-message" name="message" placeholder="Outline the role, context and timescales." required></textarea>
-                </div>
+      <!-- Row 1: Name + Company -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            placeholder="Your full name"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="contact-company">Company / organisation</label>
+          <input
+            id="contact-company"
+            name="company"
+            type="text"
+            autocomplete="organization"
+            placeholder="Organisation (optional)"
+          >
+        </div>
+      </div>
 
-                <button type="submit" class="btn btn-primary">
-                  Submit client enquiry
-                </button>
-                <p class="form-footnote">
-                  This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
-                </p>
-              </form>
-            </div>
+      <!-- Row 2: Email + Role / Focus -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="name@company.com"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="contact-role">Role / focus</label>
+          <input
+            id="contact-role"
+            name="role"
+            type="text"
+            placeholder="Role, team or mandate focus"
+          >
+        </div>
+      </div>
 
-            <!-- Talent form -->
-            <div id="talent-enquiries" class="contact-form-wrapper">
-              <div class="contact-form-heading">Talent / candidate enquiries</div>
-              <form
-                class="contact-form"
-                action="https://formsubmit.co/talent@averdonpartners.com"
-                method="POST"
-              >
-                <!-- FormSubmit config -->
-                <input type="hidden" name="_subject" value="Talent enquiry – Averdon Partners">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <!-- Honeypot field (spam protection) -->
-                <input type="text" name="_honey" style="display:none">
+      <!-- Row 3: Enquiry type + Subject -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="enquiry-type">Enquiry type</label>
+          <select id="enquiry-type" name="enquiry_type">
+            <option value="client">Client / hiring</option>
+            <option value="talent">Talent / candidate</option>
+            <option value="general" selected>General / other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-subject">Subject</label>
+          <input
+            id="contact-subject"
+            name="subject"
+            type="text"
+            placeholder="Short subject line"
+          >
+        </div>
+      </div>
 
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="talent-name">Name</label>
-                    <input id="talent-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="talent-company">Current employer</label>
-                    <input id="talent-company" name="company" type="text" autocomplete="organization" placeholder="Organisation (optional)">
-                  </div>
-                </div>
+      <!-- Row 4: Message -->
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          placeholder="Outline the role, context and timescales – or your question."
+          required
+        ></textarea>
+      </div>
 
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="talent-email">Email</label>
-                    <input id="talent-email" name="email" type="email" autocomplete="email" placeholder="name@provider.com" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="talent-role">Current / target role</label>
-                    <input id="talent-role" name="role" type="text" placeholder="Current role and what you're exploring">
-                  </div>
-                </div>
+      <button type="submit" class="btn btn-primary">
+        Submit enquiry
+      </button>
 
-                <div class="form-group">
-                  <label for="talent-message">Brief</label>
-                  <textarea id="talent-message" name="message" placeholder="Outline your background, notice period and what you’re looking for." required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                  Submit talent enquiry
-                </button>
-                <p class="form-footnote">
-                  Please avoid including sensitive personal data. A CV can be requested securely after initial contact if appropriate.
-                </p>
-              </form>
-            </div>
-
-            <!-- General contact form -->
-            <div id="general-contact" class="contact-form-wrapper">
-              <div class="contact-form-heading">General contact</div>
-              <form
-                class="contact-form"
-                action="https://formsubmit.co/info@averdonpartners.com"
-                method="POST"
-              >
-                <!-- FormSubmit config -->
-                <input type="hidden" name="_subject" value="General enquiry – Averdon Partners">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <!-- Honeypot field (spam protection) -->
-                <input type="text" name="_honey" style="display:none">
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="info-name">Name</label>
-                    <input id="info-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="info-company">Company</label>
-                    <input id="info-company" name="company" type="text" autocomplete="organization" placeholder="Organisation (if applicable)">
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="info-email">Email</label>
-                    <input id="info-email" name="email" type="email" autocomplete="email" placeholder="name@provider.com" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="info-role">Subject</label>
-                    <input id="info-role" name="role" type="text" placeholder="Reason for contacting">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="info-message">Message</label>
-                  <textarea id="info-message" name="message" placeholder="Outline how we can help." required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                  Submit general enquiry
-                </button>
-                <p class="form-footnote">
-                  This form is non-binding and does not constitute an agreement to proceed. Please avoid including sensitive personal data.
-                </p>
-              </form>
-            </div>
-          </div>
+      <p class="form-footnote">
+        This form is non-binding and does not constitute an agreement to proceed.
+        Please avoid including sensitive personal data.
+      </p>
+    </form>
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -1348,5 +1313,44 @@
       </div>
     </div>
   </footer>
+  <script>
+  (function () {
+    var form = document.getElementById('unified-contact-form');
+    if (!form) return;
+
+    var typeSelect = document.getElementById('enquiry-type');
+    var subjectInput = document.getElementById('contact-subject');
+    var hiddenSubject = document.getElementById('email-subject');
+
+    var ENDPOINTS = {
+      client: 'https://formsubmit.co/clients@averdonpartners.com',
+      talent: 'https://formsubmit.co/talent@averdonpartners.com',
+      general: 'https://formsubmit.co/info@averdonpartners.com'
+    };
+
+    form.addEventListener('submit', function () {
+      var type = typeSelect ? typeSelect.value : 'general';
+      if (!ENDPOINTS[type]) type = 'general';
+
+      // Set the correct FormSubmit endpoint
+      form.action = ENDPOINTS[type];
+
+      // Tidy email subject line
+      if (hiddenSubject) {
+        var label = '';
+        if (type === 'client') label = '[Client] ';
+        else if (type === 'talent') label = '[Talent] ';
+        else label = '[General] ';
+
+        var userSubject = subjectInput && subjectInput.value
+          ? subjectInput.value.trim()
+          : 'Website enquiry';
+
+        hiddenSubject.value = label + userSubject + ' – Averdon Partners';
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
