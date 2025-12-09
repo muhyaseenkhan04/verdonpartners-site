@@ -207,11 +207,10 @@
     main {
       padding-bottom: 4rem;
     }
-
-    section {
-      padding: 4rem 0;
-    }
-
+section {
+  padding: 4rem 0;
+  scroll-margin-top: 90px;
+}
     .section-dark {
       background-color: var(--navy-soft);
       color: var(--white);
