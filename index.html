@@ -59,9 +59,9 @@
             Averdon Partners works with COOs, CEOs, Accountable Managers, Heads of Maintenance and Heads of Engineering on business-critical technical and leadership hires in aviation, aerospace and other asset-heavy, safety-critical environments.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">For clients</a>
-            <a href="#contact" class="btn btn-secondary">For candidates</a>
-          </div>
+  <a href="#client-enquiries" class="btn btn-primary">For clients</a>
+  <a href="#talent-enquiries" class="btn btn-secondary">For candidates</a>
+</div>
           <p class="hero-subtext">
             If you are accountable for a fleet, an asset base or a control room, this site is written for you.
           </p>
@@ -527,15 +527,33 @@
     var form = document.getElementById('unified-contact-form');
     if (!form) return;
 
-    var typeSelect = document.getElementById('enquiry-type');
+    var typeSelect   = document.getElementById('enquiry-type');
     var subjectInput = document.getElementById('contact-subject');
     var hiddenSubject = document.getElementById('email-subject');
 
     var ENDPOINTS = {
-      client: 'https://formsubmit.co/clients@averdonpartners.com',
-      talent: 'https://formsubmit.co/talent@averdonpartners.com',
+      client:  'https://formsubmit.co/clients@averdonpartners.com',
+      talent:  'https://formsubmit.co/talent@averdonpartners.com',
       general: 'https://formsubmit.co/info@averdonpartners.com'
     };
+
+    function syncTypeFromHash() {
+      if (!typeSelect) return;
+      var hash = window.location.hash;
+
+      if (hash === '#client-enquiries') {
+        typeSelect.value = 'client';
+      } else if (hash === '#talent-enquiries') {
+        typeSelect.value = 'talent';
+      } else if (hash === '#general-contact') {
+        typeSelect.value = 'general';
+      }
+      // Anything else: leave current selection as-is
+    }
+
+    // Run on load + whenever hash changes
+    syncTypeFromHash();
+    window.addEventListener('hashchange', syncTypeFromHash);
 
     form.addEventListener('submit', function () {
       var type = typeSelect ? typeSelect.value : 'general';
@@ -544,7 +562,7 @@
       // Set the correct FormSubmit endpoint
       form.action = ENDPOINTS[type];
 
-      // Tidy email subject line
+      // Build email subject
       if (hiddenSubject) {
         var label = '';
         if (type === 'client') label = '[Client] ';
@@ -560,6 +578,5 @@
     });
   })();
 </script>
-
 </body>
 </html>
