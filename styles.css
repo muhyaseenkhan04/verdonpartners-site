@@ -1,15 +1,49 @@
 :root {
-  --navy: #0B1628;
-  --navy-soft: #121a2e;
-  --charcoal: #1B2027;
-  --light-grey: #D8D4CC;
-  --mid-grey: #8C8680;
-  --gold: #C2A05A;
-  --white: #FFFFFF;
-  --off-white: #F4F2EC;
-  --border-soft: rgba(12, 18, 30, 0.08);
-  --text-dark: #191919;
-  --text-muted: #5B5750;
+  /* === Core Brand / Background === */
+  --navy: #0B1628;              /* Averdon Navy – main brand colour (hero, header, primary buttons) */
+  --navy-soft: #121A2E;         /* Averdon Midnight – dark cards, overlays, hovers */
+  --navy-footer: #050910;       /* Deep footer navy – footer and very dark sections */
+  --charcoal: #1B2027;          /* Strong headings, icons, rules */
+
+  --off-white: #F4F2EC;         /* Main page background */
+  --white: #FFFFFF;             /* Card and content backgrounds */
+
+  /* === Greys / Text / Neutrals === */
+  --light-grey: #D8D4CC;        /* Light stone – cards, borders, light panels */
+  --mid-grey: #8C8680;          /* Mid grey – subtle UI/dividers */
+
+  --warm-light-grey: #C9C4B6;   /* Alt section backgrounds, soft strips */
+  --warm-mid-neutral: #B1A894;  /* Founder / note panels, sidebars */
+
+  --text-dark: #191919;         /* Primary body text */
+  --text-muted: #5B5750;        /* Secondary text, meta, captions */
+
+  /* === Accent – Gold === */
+  --gold: #C2A05A;              /* Primary accent – small details only */
+  --gold-hover: #B18E48;        /* Darker gold – hover states, active accents */
+
+  /* === Accent – Infra / Capital Green (NEW) === */
+  --infra-green: #0B3D31;       /* Deep forest green – infra/capital accent */
+  --infra-green-soft: rgba(11, 61, 49, 0.12); /* Very light fill for charts/tags */
+
+  /* === Ivory / Off-White Variants === */
+  --ivory-soft: #F7F6F2;        /* Soft ivory – headings on dark backgrounds */
+  --hero-text: #F8F7F4;         /* Hero body text on dark/navy */
+
+  /* === Neutral Browns (Founder / Story Blocks) === */
+  --founder-dark: #3A352F;      /* Founder highlight background */
+  --founder-muted: #7A7469;     /* Founder footnotes, muted text */
+
+  /* === Borders / Transparency === */
+  --border-soft: rgba(12, 18, 30, 0.08);     /* Default soft border on light backgrounds */
+
+  --overlay-navy: rgba(11, 22, 40, 0.9);     /* Dark overlay for modals, hero overlays */
+  --overlay-gold-soft: rgba(194, 160, 90, 0.25); /* Decorative gold tint (sparingly) */
+
+  --white-soft-06: rgba(255, 255, 255, 0.06); /* White with alpha for glass panels on dark bg */
+  --white-soft-12: rgba(255, 255, 255, 0.12);
+  --white-soft-24: rgba(255, 255, 255, 0.24);
+  --white-soft-90: rgba(255, 255, 255, 0.90); /* High-contrast text on dark bg */
 }
 
 * {
