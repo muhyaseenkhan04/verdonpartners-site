@@ -606,11 +606,6 @@ ul.bullet-list li::before {
 .contact-forms {
   width: 100%;
 }
-
-.contact-form-wrapper + .contact-form-wrapper {
-  margin-top: 1.5rem;
-}
-
 .contact-form-heading {
   font-size: 0.78rem;
   text-transform: uppercase;
