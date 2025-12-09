@@ -690,6 +690,37 @@ section {
     .footer-bottom span {
       opacity: 0.88;
     }
+/* Force white typography in "What we do" section */
+#what-we-do {
+  color: #FFFFFF;
+}
+
+/* Headings */
+#what-we-do h2,
+#what-we-do h3 {
+  color: #FFFFFF;
+}
+
+/* Paragraphs + list items */
+#what-we-do p,
+#what-we-do li {
+  color: #FFFFFF;
+}
+
+/* Card paragraph text – override default muted colour */
+#what-we-do .card p {
+  color: #FFFFFF;
+}
+
+/* Card tags in this section – slightly softer white */
+#what-we-do .card-tag {
+  color: rgba(248, 247, 244, 0.78);
+}
+
+/* Section intro paragraphs – keep them readable on dark */
+#what-we-do .section-header p {
+  color: rgba(248, 247, 244, 0.85);
+}
 
     /* Responsive */
 
