@@ -2,8 +2,8 @@
   var form = document.getElementById('unified-contact-form');
   if (!form) return;
 
-  var typeSelect   = document.getElementById('enquiry-type');
-  var subjectInput = document.getElementById('contact-subject');
+  var typeSelect    = document.getElementById('enquiry-type');
+  var subjectInput  = document.getElementById('contact-subject');
   var hiddenSubject = document.getElementById('email-subject');
 
   var ENDPOINTS = {
@@ -12,23 +12,23 @@
     general: 'https://formsubmit.co/info@averdonpartners.com'
   };
 
-  function syncTypeFromHash() {
+  function setTypeFromHash() {
     if (!typeSelect) return;
     var hash = window.location.hash;
 
-    if (hash === '#client-enquiries') {
+    if (hash === '#contact-client') {
       typeSelect.value = 'client';
-    } else if (hash === '#talent-enquiries') {
+    } else if (hash === '#contact-talent') {
       typeSelect.value = 'talent';
-    } else if (hash === '#general-contact') {
+    } else if (hash === '#contact' || hash === '#contact-general') {
       typeSelect.value = 'general';
     }
-    // Anything else: leave current selection as-is
+    // Anything else: leave current selection alone
   }
 
   // Run on load + whenever hash changes
-  syncTypeFromHash();
-  window.addEventListener('hashchange', syncTypeFromHash);
+  setTypeFromHash();
+  window.addEventListener('hashchange', setTypeFromHash);
 
   form.addEventListener('submit', function () {
     var type = typeSelect ? typeSelect.value : 'general';
@@ -39,10 +39,14 @@
 
     // Build email subject
     if (hiddenSubject) {
-      var label = '';
-      if (type === 'client') label = '[Client] ';
-      else if (type === 'talent') label = '[Talent] ';
-      else label = '[General] ';
+      var label;
+      if (type === 'client') {
+        label = '[Client] ';
+      } else if (type === 'talent') {
+        label = '[Talent] ';
+      } else {
+        label = '[General] ';
+      }
 
       var userSubject = subjectInput && subjectInput.value
         ? subjectInput.value.trim()
