@@ -505,7 +505,9 @@ section {
       gap: 2.2rem;
       align-items: flex-start;
     }
-
+    .contact-anchor {
+  scroll-margin-top: 90px;
+}
     .contact-details p {
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
