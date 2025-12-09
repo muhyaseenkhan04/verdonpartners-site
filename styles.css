@@ -828,4 +828,12 @@ textarea {
     transition: none !important;
   }
 }
+/* Tidy up spacing between contact section and footer */
+main {
+  padding-bottom: 0;
+}
+
+.site-footer {
+  margin-top: 0;
+}
 
