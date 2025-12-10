@@ -134,7 +134,7 @@ p {
   white-space: nowrap;
 }
 .brand-logo {
-  height: 28px;          /* tweak up/down if you want it bigger/smaller */
+  height: 56px;          /* tweak up/down if you want it bigger/smaller */
   width: auto;
   display: block;
 }
@@ -143,7 +143,7 @@ p {
   font-weight: 600;
 }
   .brand-logo {
-    height: 32px;   /* slightly smaller on mobile */
+    height: 40px;   /* slightly smaller on mobile */
   }
 
 nav {
@@ -864,6 +864,16 @@ textarea {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+  html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  margin-top: 0;
+}
+
 }
 header {
   background-color: var(--navy-soft); /* #121A2E */
