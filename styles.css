@@ -852,3 +852,6 @@ textarea {
     transition: none !important;
   }
 }
+header {
+  background-color: var(--navy-soft); /* #121A2E */
+}
