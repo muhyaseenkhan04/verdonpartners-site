@@ -134,7 +134,7 @@ p {
 }
 
 .brand-logo {
-  height: 45px;      /* <- change this number to taste */
+  height: 55px;      /* <- change this number to taste */
   width: auto;
   display: block;
 }
